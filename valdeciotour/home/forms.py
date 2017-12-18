@@ -26,4 +26,4 @@ class ContactValdeciotour(forms.Form):
 		
 		message = message % context
 		
-		send_mail(subject, message, settings.DEFAULT_FROM_EMAIL, [settings.CONTACT_EMAIL])
+		send_mail('Contato do site Valdécio Tour', message, settings.DEFAULT_FROM_EMAIL, [settings.CONTACT_EMAIL])

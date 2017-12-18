@@ -35,19 +35,19 @@
 <section id="works" class="works section no-padding">
   <div class="container-fluid">
     <div class="row no-gutter">
-	{% for package in packages %}
-      <div class="col-lg-3 col-md-6 col-sm-6 work"> 
-		<a href="{{ package.image.url }}" class="work-box"> <img src="{{ package.image.url }}" alt="">
-			<div class="overlay">
-			  <div class="overlay-caption">
-				<h5>{{ package.title }}</h5>
-				  <h5>{{ package.image.url }}</h5>
-				<p>Viagem em {{ package.travel_date }}</p>
-			  </div>
-			</div>
-	 	</a>
-	  </div>  
-	{% endfor %}
+    	{% for item in packages %}
+        <div class="col-lg-3 col-md-6 col-sm-6 work"> 
+    		  <!--<a href="{{ item.image.url }}" class="work-box"> <img src="{{ item.image.url }}" alt="">-->
+          <a href="{% static 'images/1.jpg' %}" class="work-box"> <img src="{% static 'images/1.jpg' %}" alt="">
+      			<div class="overlay">
+      			  <div class="overlay-caption">
+        				<h5>{{ item.title }}</h5>
+        				<p>Viagem em {{ item.travel_date }}</p>
+      			  </div>
+      			</div>
+  	 	    </a>
+  	  </div>  
+    	{% endfor %}
     </div>
   </div>
 </section>
@@ -92,7 +92,7 @@
         <h5>Shoot An Email</h5>
         <p>We are happy to talk you through any projects or run live demos for those wishing to see what it is to use our products and how they look like.</p>
         <div id="message"></div>
-        <form method="post"  name="cform" id="cform" role="form">
+        <form method="POST" id="cform" role="form">
 		  {% if is_valid%}
 			<script type="text/javascript">
 				alert("Sua mensagem foi enviada com sucesso. A Valdécio Tour agradece pelo seu contato!");
@@ -104,7 +104,7 @@
           	{{ field }}
 		  {% endfor %}
 			</fieldset>
-          <input type="submit" id="submit" name="send" class="submitBnt" value="Enviar Mensagem">
+          <input type="submit" id="submit" class="submitBnt" value="Enviar Mensagem">
           <div id="simple-msg"></div>
         </form>
       </div>

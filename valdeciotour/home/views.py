@@ -14,7 +14,7 @@ def index(request):
 		form = ContactValdeciotour(request.POST or None)
 		if form.is_valid():
 			context['is_valid'] = True
-			form.save_sendmail()
+			form.send_mail()
 			form = ContactValdeciotour()
 	else:
 		form = ContactValdeciotour()

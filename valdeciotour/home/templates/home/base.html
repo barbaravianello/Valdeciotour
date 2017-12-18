@@ -20,6 +20,8 @@
 		<link rel="stylesheet" href="{% static 'css/responsive.css' %}">
 		<link rel="stylesheet" href="{% static 'css/font-icon.css' %}">
 		<link rel="stylesheet" href="{% static 'css/animate.min.css' %}">
+		<link rel="stylesheet" href="{% static 'css/owl.carousel.css' %}">
+		<link rel="stylesheet" href="{% static 'css/owl.theme.default.css' %}">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	</head>
 
@@ -80,19 +82,58 @@
 				</div>
 			</div>
 		</div>
-		<!-- footer top --> 
-
+		<!-- footer top --> 	
 		</footer>
+	
+		
+		
 		<!-- Footer section --> 
 		<!-- JS FILES --> 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
 		<script src="{% static 'js/bootstrap.min.js' %}"></script> 
 		<script src="{% static 'js/jquery.flexslider-min.js' %}"></script> 
 		<script src="{% static 'js/jquery.fancybox.pack.js' %}"></script> 
-		<script src="{% static 'js/retina.min.js' %}"></script> 
+		<!--<script src="{% static 'js/retina.min.js' %}"></script>-->
 		<script src="{% static 'js/modernizr.js' %}"></script> 
 		<script src="{% static 'js/main.js' %}"></script> 
+		<script src="{% static 'js/owl.carousel.js' %}"></script>
 		<script type="text/javascript" src="{% static 'js/jquery.contact.js' %}"></script>
+		
+		
+		<script>
+		$("#slideshow").owlCarousel({
+		        navigation : true, // Show next and prev buttons
+		        slideSpeed : 200,
+		        paginationSpeed : 300,
+		        items:3,
+		        autoplay: true,
+				autoplayTimeout: 8000,
+				loop: true
+		    });
+
+			$('.owl-carousel').owlCarousel({
+			    loop:true,
+			    margin:10,
+			    nav:true,
+			    //autoplay: true,
+				//autoplayTimeout: 8000,
+				//autoplayHoverPause: true,
+			    responsive:{
+			        0:{
+			            items:1
+			        },
+			        600:{
+			            items:3
+			        },
+			        1000:{
+			            items:3
+			        }
+			    }
+
+			});
+		
+		
+		</script>
 	</body>
 </html>
 

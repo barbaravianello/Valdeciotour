@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from home.models import Package
+from .forms import ContactValdeciotour
 
 def index(request): 
 
@@ -8,4 +9,15 @@ def index(request):
 	context = {
 		'packages': packages,	
 	}
+	
+	if request.method == 'POST':
+		form = ContactValdeciotour(request.POST or None)
+		if form.is_valid():
+			context['is_valid'] = True
+			form.save_sendmail()
+			form = ContactValdeciotour()
+	else:
+		form = ContactValdeciotour()
+	context['form'] = form
+	
 	return render(request, "home/index.html", context)

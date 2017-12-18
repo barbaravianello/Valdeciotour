@@ -8,7 +8,7 @@
       <div class="banner-text text-center">
         <h1>VALDECIO TOUR</h1>
         <p>Lorem ipsum dolor sit ametcursus magna vel scelerisque Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna vel scelerisque nisl consectetur et.nisl consectetur et.</p>
-        <a href="#" class="btn btn-large">Find out more</a> </div>
+        <a href="#fh5co-why-us" class="btn btn-large">SAIBA MAIS</a> </div>
       <!-- banner text --> 
     </div>
   </div>
@@ -18,14 +18,33 @@
 
 
 <!-- QUEM SOMOS -->
-<section id="intro" class="section intro">
+<div id="fh5co-why-us" class="animate-box">
   <div class="container">
-    <div class="col-md-8 col-md-offset-2 text-center">
-      <h3>QUEM SOMOS</h3>
-      <p>Start Bootstrap has everything you need to get your new website up and in no time! All of the templates and themes on Start Bootstrap are open source, free to download, and easy to use. No strings attached!</p>
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3 text-center fh5co-heading">
+        <h3>QUEM SOMOS?</h3> <br>
+        <p>Start Bootstrap has everything you need to get your new website up and in no time! All of the templates and themes on Start Bootstrap are open source, free to download, and easy to use. No strings attached!</p>
+        <br>
+        <h3>POR QUE CONTRATAR A VALDECIO TOUR?</h3> <br>
+      </div>
+      <div class="col-md-4 text-center item-block">
+        <span class="icon"><img src="{% static 'images/30.svg' %}" alt="Motivo 1" class="img-responsive"></span>
+        <h3>MOTIVO 1</h3>
+        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove.</p>
+      </div>
+      <div class="col-md-4 text-center item-block">
+        <span class="icon"><img src="{% static 'images/18.svg' %}" alt="Motivo 2" class="img-responsive"></span>
+        <h3>MOTIVO 2</h3>
+        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove.</p>
+      </div>
+      <div class="col-md-4 text-center item-block">
+        <span class="icon"><img src="{% static 'images/27.svg' %}" alt="Motivo 3" class="img-responsive"></span>
+        <h3>MOTIVO 3</h3>
+        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove.</p>
+      </div>
     </div>
   </div>
-</section>
+</div>
 <!-- QUEM SOMOS --> 
 
 
@@ -35,7 +54,10 @@
 <section id="works" class="works section no-padding">
   <div class="container-fluid">
     <div class="row no-gutter">
+      <h3 style="text-align: center;"> CONHEÇA NOSSOS PACOTES</h3>
+      <br>
     	{% for item in packages %}
+		<img src="{{ item.image.url }}" alt="">
         <div class="col-lg-3 col-md-6 col-sm-6 work"> 
     		  <!--<a href="{{ item.image.url }}" class="work-box"> <img src="{{ item.image.url }}" alt="">-->
           <a href="{% static 'images/1.jpg' %}" class="work-box"> <img src="{% static 'images/1.jpg' %}" alt="">
@@ -85,32 +107,52 @@
 
 
 <!-- contact section -->
-<section id="contact" class="section">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-8 col-md-offset-2 conForm">
-        <h5>Shoot An Email</h5>
-        <p>We are happy to talk you through any projects or run live demos for those wishing to see what it is to use our products and how they look like.</p>
-        <div id="message"></div>
-        <form method="POST" id="cform" role="form">
-		  {% if is_valid%}
-			<script type="text/javascript">
-				alert("Sua mensagem foi enviada com sucesso. A Valdécio Tour agradece pelo seu contato!");
-			</script>
-		  {% endif %}
-		  {% csrf_token %}
-			<fieldset>
-		  {% for field in form %}
-          	{{ field }}
-		  {% endfor %}
-			</fieldset>
-          <input type="submit" id="submit" class="submitBnt" value="Enviar Mensagem">
-          <div id="simple-msg"></div>
-        </form>
+<div class="fh5co-contact animate-box">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <h3>Contato</h3>
+          <ul class="contact-info">
+            <li><i class="icon-map"></i>198 West 21th Street, Suite 721 New York NY 10016</li>
+            <li><i class="icon-phone"></i>+ 1235 2355 98</li>
+            <li><i class="icon-envelope"></i><a href="#">info@yoursite.com</a></li>
+            <li><i class="icon-globe"></i><a href="#">www.yoursite.com</a></li>
+          </ul>
+        </div>
+        <div class="col-md-8 col-md-push-1 col-sm-12 col-sm-push-0 col-xs-12 col-xs-push-0">
+		<br>
+           <form method="POST" role="form">
+            <div class="row">
+              {% if is_valid%}
+                <script type="text/javascript">
+                  alert("Sua mensagem foi enviada com sucesso. A Valdécio Tour agradece pelo seu contato!");
+                </script>
+              {% endif %}
+              {% csrf_token %}
+              <fieldset>
+                {% for field in form %}
+              	{% if field.label == 'Nome' or field.label == 'E-mail'%}
+					<div class="col-md-6">
+						{{ field }}
+					</div>
+				{% else %}
+					<div class="col-md-12">
+						{{ field }}
+					</div>
+				{% endif %}
+                {% endfor %}
+              </fieldset>
+              <div class="col-md-12">
+                <div class="form-group">
+                  <input value="Enviar mensagem" class="btn btn-primary" type="submit">
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
       </div>
-    </div>
+    </div>  
   </div>
-</section>
 <!-- contact section --> 
 
 

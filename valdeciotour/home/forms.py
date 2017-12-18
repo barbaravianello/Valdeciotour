@@ -5,9 +5,9 @@ from . import views
 
 
 class ContactValdeciotour(forms.Form):
-	name = forms.CharField(label = 'Nome', widget=forms.TextInput(attrs={'class':'col-xs-12 col-sm-12 col-md-12 col-lg-12', 'placeholder':'Nome', 'required':'required'}))
-	email = forms.EmailField(label = 'E-mail', widget=forms.TextInput(attrs={'class':'col-xs-12 col-sm-12 col-md-12 col-lg-12', 'placeholder':'seuemail@gmail.com', 'required':'required', 'type': 'email'}) )
-	message = forms.CharField(label='Mensagem', widget=forms.Textarea(attrs={'class':'col-xs-12 col-sm-12 col-md-12 col-lg-12', 'rows': 5, 'cols': 20 ,'placeholder':'Escreva sua mensagem', 'required':'required'}))
+	name = forms.CharField(label = 'Nome', widget=forms.TextInput(attrs={'class':'form-group form-control', 'placeholder':'Nome', 'required':'required'}))
+	email = forms.EmailField(label = 'E-mail', widget=forms.TextInput(attrs={'class':'form-group form-control', 'placeholder':'E-mail', 'required':'required', 'type': 'email'}) )
+	message = forms.CharField(label='Mensagem', widget=forms.Textarea(attrs={'class':'col-md-12 form-group form-control', 'rows': 7, 'cols': 30 ,'placeholder':'Mensagem', 'required':'required'}))
 
 	def send_mail(self):
 

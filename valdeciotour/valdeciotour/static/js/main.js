@@ -80,3 +80,29 @@ $(document).ready(function() {
 		};
 
 /* ****************************************** */
+
+
+/* ******************************************
+	 Configuração do Carousel de Galeria 
+   ****************************************** */
+
+	$('.owl-carousel').owlCarousel({
+		loop:true,
+		margin:10,
+		dots:true,
+		nav:true,
+		autoPlay: 3000, 
+		responsive:{
+			0:{
+				items:1
+			},
+			600:{
+				items:3
+			},
+			1000:{
+				items:3
+			}
+		}
+	});
+
+/* ****************************************** */

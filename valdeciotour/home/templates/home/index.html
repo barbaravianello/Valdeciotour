@@ -22,10 +22,10 @@
   <div class="container">
     <div class="row">
       <div class="col-md-6 col-md-offset-3 text-center fh5co-heading">
-        <h3>QUEM SOMOS?</h3> <br>
+        <h3 class="titulos" id="margem-quemsomos">QUEM SOMOS?</h3> <br>
         <p>Start Bootstrap has everything you need to get your new website up and in no time! All of the templates and themes on Start Bootstrap are open source, free to download, and easy to use. No strings attached!</p>
         <br>
-        <h3>POR QUE CONTRATAR A VALDECIO TOUR?</h3> <br>
+        <h3 class="titulos" id="margem-pq">POR QUE CONTRATAR A VALDECIO TOUR?</h3> <br>
       </div>
       <div class="col-md-4 text-center item-block">
         <span class="icon"><img src="{% static 'images/30.svg' %}" alt="Motivo 1" class="img-responsive"></span>
@@ -49,26 +49,36 @@
 
 
 
-
 <!-- PACOTES -->
 <section id="works" class="works section no-padding">
   <div class="container-fluid">
     <div class="row no-gutter">
-      <h3 style="text-align: center;"> CONHEÇA NOSSOS PACOTES</h3>
+      <h3 style="text-align: center;" class="titulos" id="margem-pacotes"> CONHEÇA NOSSOS PACOTES</h3>
       <br>
-    	{% for item in packages %}
-        <div class="col-lg-3 col-md-6 col-sm-6 work"> 
-    	  <a href="{{ item.image.url }}" class="work-box"> <img src="{{ item.image.url }}" alt="">
-      			<div class="overlay">
-      			  <div class="overlay-caption">
-        				<h5>{{ item.title }}</h5>
-        				<p>Viagem em {{ item.travel_date }}</p>
-      			  </div>
-      			</div>
-  	 	    </a>
-  	  </div>  
-    	{% endfor %}
-    </div>
+		<div class="controls">
+			<div class="filters text-center">
+			  <ul class="nav nav-pills">
+				<li class="active"><a href="#" data-filter="*">Todos</a></li>
+				<li><a href="#" data-filter=".ida">Ida</a></li>
+				<li><a href="#" data-filter=".idavolta">Ida e Volta</a></li>
+			  </ul>
+			</div>
+			<div class="isotope-container row grid-space-20">
+				{% for item in packages %}
+				<div class=" mix category-2 col-lg-3 col-md-6 col-sm-6 work isotope-item {{ item.travel_type }}"> 
+				  <a href="{{ item.image.url }}" class="work-box"> <img src="{{ item.image.url }}" alt="">
+						<div class="overlay">
+						  <div class="overlay-caption">
+								<h5>{{ item.title }}</h5>
+								<p>Viagem em {{ item.travel_date }}</p>
+						  </div>
+						</div>
+					</a>
+				 </div>  
+				{% endfor %}
+			</div>
+		</div>
+     </div>
   </div>
 </section>
 <!-- PACOTES --> 
@@ -79,12 +89,12 @@
     <div class="gtco-container">
       <div class="row">
         <div class="col-md-8 col-md-offset-2 text-center gtco-heading">
-          <h2>Products</h2>
+          <h2>GALERIA</h2>
           <p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
         </div>
       </div>
       <div class="row">
-        <div class="owl-carousel owl-carousel2 row" id="slideshow">
+        <div class="owl-carousel owl-carousel-carousel">
           <div class="item">
             <img src="{% static 'images/img_1.jpg' %}" alt="Free HTML5 Bootstrap Template by GetTemplates.co">
           </div>

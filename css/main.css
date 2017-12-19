@@ -1375,7 +1375,39 @@ input[type="button"].btn-block {
 	 Footer
 -------------------------------------------------------------------------------*/
 .footer {
-	text-align: left;
+    padding-top:50px;
+    padding-bottom:50px;
+    color:#fff;
+    background:#262d42;
+}
+
+#social {
+    text-align: center !important;
+    font-size: 13px !important;
+}
+
+/* For Footer Area */
+
+.main-footer .social{
+    margin-bottom:10px;
+}
+.main-footer .social a{
+    color:#c3bec2;
+    font-size:170%;
+}
+.main-footer .social a:hover{
+    color:#ff2b4a;
+}
+.main-footer .social a i{
+    border-right:0px solid #c3bec2;
+    padding:0 10px 0 10px;
+}
+.main-footer .social a i.dribbble{
+    border-right:0;
+}
+.main-footer p{
+    color:#c3bec2;
+    font-size:12px; 
 }
 .footer-top {
 	background-color: #181818;
@@ -1385,42 +1417,6 @@ input[type="button"].btn-block {
 	background-color: #313454;
 	padding: 20px 0;
 }
-.footer .footer-col {
-	margin-bottom: 80px;
-}
-.footer h5 {
-	color: #fff;
-}
-.footer h5 {
-	margin-bottom: 20px;
-}
-.footer p {
-	color: rgba(255, 255, 255, 0.25);
-}
-.footer a {
-	color: rgba(255, 255, 255, 0.50);
-}
-.footer a:hover {
-	color: #e84545;
-}
-.footer .footer-share {
-	margin-top: 0;
-}
-.footer .footer-share li {
-	display: inline-block;
-	float: none;
-}
-.footer .footer-share a {
-	border: none;
-	font-size: 21px;
-	color: rgba(255, 255, 255, 0.25);
-}
-.footer .fa-heart {
-	color: #e84545;
-	font-size: 11px;
-	margin: 0 2px;
-}
-
 
 
 

@@ -87,14 +87,46 @@
 
 
 
-
 <!-- PACOTES -->
 <section id="works" class="works section no-padding">
   <div class="container-fluid">
     <div class="row no-gutter">
     <h3 style="text-align: center;"> CONHEÇA NOSSOS PACOTES</h3>
     <br>
-      <div class="col-lg-3 col-md-6 col-sm-6 work"> <a href="images/work-1.jpg" class="work-box"> <img src="images/1.jpg" alt="">
+<!-- TESTE-->
+<div class="controls">
+  <label>Filter:</label>
+  
+  <select id="FilterSelect">
+    <option value="all">All</option>
+    <option value=".category-1">Category 1</option>
+    <option value=".category-2">Category 2</option>
+  </select>
+  
+  <label>Sort:</label>
+  
+  <select id="SortSelect">
+    <option value="myorder:asc">Asc</option>
+    <option value="myorder:desc">Desc</option>
+  </select>
+</div>
+<div id="Container" class="container">
+  <div class="mix category-1" data-myorder="1"></div>
+  <div class="mix category-1" data-myorder="2"></div>
+  <div class="mix category-1" data-myorder="3"></div>
+  <div class="mix category-2" data-myorder="4"></div>
+  <div class="mix category-1" data-myorder="5"></div>
+  <div class="mix category-1" data-myorder="6"></div>
+  <div class="mix category-2" data-myorder="7"></div>
+  <div class="mix category-2" data-myorder="8"></div>
+  
+  <div class="gap"></div>
+  <div class="gap"></div>
+</div>
+
+<!-- TESTE-->
+
+      <div class="col-lg-3 col-md-6 col-sm-6 work mix category-1" data-myorder="1"> <a href="images/work-1.jpg" class="work-box"> <img src="images/1.jpg" alt="">
         <div class="overlay">
           <div class="overlay-caption">
             <h5>LUGAR 1</h5>
@@ -103,7 +135,7 @@
         </div>
         <!-- overlay --> 
         </a> </div>
-      <div class="col-lg-3 col-md-6 col-sm-6 work"> <a href="images/work-2.jpg" class="work-box"> <img src="images/2.jpg" alt="">
+      <div class="col-lg-3 col-md-6 col-sm-6 work mix category-2" data-myorder="2"> <a href="images/work-2.jpg" class="work-box"> <img src="images/2.jpg" alt="">
         <div class="overlay">
           <div class="overlay-caption">
             <h5>LUGAR 2</h5>
@@ -172,12 +204,12 @@
 <!-- PACOTES --> 
 
 
-
+<!-- GALERIA -->
 <div id="gtco-products" data-section="products">
     <div class="gtco-container">
       <div class="row">
         <div class="col-md-8 col-md-offset-2 text-center gtco-heading">
-          <h2>Products</h2>
+          <h2>GALERIA</h2>
           <p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
         </div>
       </div>
@@ -199,7 +231,7 @@
       </div>
     </div>
   </div>
-
+<!-- GALERIA -->
 
 
 

@@ -2514,4 +2514,49 @@
 .icon-dribbble2:before {
     content: "\e063";
 }
+.icon-skype-with-circle:before {
+    content: "\ea55";
+}
+.icon-spotify-with-circle:before {
+    content: "\ea5a";
+}
+.icon-facebook-with-circle:before {
+    content: "\ea67";
+}
+.icon-flickr-with-circle:before {
+    content: "\ea69";
+}
+.icon-github-with-circle:before {
+    content: "\ea6b";
+}
+.icon-google-with-circle:before {
+    content: "\ea6d";
+}
+.icon-instagram-with-circle:before {
+    content: "\ea6f";
+}
+.icon-lastfm-with-circle:before {
+    content: "\ea71";
+}
+.icon-linkedin-with-circle:before {
+    content: "\ea73";
+}
+.icon-pinterest-with-circle:before {
+    content: "\ea75";
+}
+.icon-stumbleupon-with-circle:before {
+    content: "\ea78";
+}
+.icon-tumblr-with-circle:before {
+    content: "\ea7a";
+}
+.icon-twitter-with-circle:before {
+    content: "\ea7c";
+}
+.icon-vimeo-with-circle:before {
+    content: "\ea7e";
+}
+.icon-youtube-with-circle:before {
+    content: "\ea80";
+}
 

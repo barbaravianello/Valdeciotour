@@ -2132,3 +2132,37 @@ button + label{
 }
 
 /* TESTE */
+
+/* GERAL DOA TITULO */
+.titulos {
+    font-size: 34px !important;
+    margin-bottom: 20px !important;
+    line-height: 1.5 !important;
+    font-weight: bold !important;
+    color: #000 !important;
+    position: relative !important;
+    padding-bottom: 10px !important;
+}
+
+.titulos:before {
+	position: absolute !important;
+    bottom: 0 !important;
+    content: "" !important;
+    width: 50px !important;
+    margin-left: -25px !important;
+    height: 2px !important;
+    left: 50% !important;
+    background: #00B906 !important;
+}
+
+#margem-quemsomos{
+
+}
+
+#margem-pq {
+	margin-top: 9%;
+}
+
+#margem-pacotes {
+	margin-top: 7%;
+}

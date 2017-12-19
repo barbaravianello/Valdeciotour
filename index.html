@@ -26,7 +26,6 @@
 </head>
 
 <body>
-<!-- header section -->
 <section class="banner" role="banner">
   <header id="header">
     <div class="header-content clearfix"> <a class="logo" href="index.html">VALDECIO TOUR</a>
@@ -60,10 +59,10 @@
     <div class="container">
       <div class="row">
         <div class="col-md-6 col-md-offset-3 text-center fh5co-heading">
-          <h3>QUEM SOMOS?</h3> <br>
+          <h3 class="titulos" id="margem-quemsomos">QUEM SOMOS?</h3> <br>
       <p>Start Bootstrap has everything you need to get your new website up and in no time! All of the templates and themes on Start Bootstrap are open source, free to download, and easy to use. No strings attached!</p>
       <br>
-      <h3>POR QUE CONTRATAR A VALDECIO TOUR?</h3> <br>
+      <h3 class="titulos" id="margem-pq">POR QUE CONTRATAR A VALDECIO TOUR?</h3> <br>
         </div>
         <div class="col-md-4 text-center item-block">
           <span class="icon"><img src="images/30.svg" alt="Free HTML5 Templates" class="img-responsive"></span>
@@ -91,7 +90,7 @@
 <section id="works" class="works section no-padding">
   <div class="container-fluid">
     <div class="row no-gutter">
-    <h3 style="text-align: center;"> CONHEÇA NOSSOS PACOTES</h3>
+    <h3 style="text-align: center;" class="titulos" id="margem-pacotes"> CONHEÇA NOSSOS PACOTES</h3>
     <br>
 <!-- TESTE-->
 <div class="controls">
@@ -242,14 +241,15 @@
         <div class="col-md-3">
           <h3>Contato</h3>
           <ul class="contact-info">
-            <li><i class="icon-map"></i>198 West 21th Street, Suite 721 New York NY 10016</li>
-            <li><i class="icon-phone"></i>+ 1235 2355 98</li>
-            <li><i class="icon-envelope"></i><a href="#">info@yoursite.com</a></li>
-            <li><i class="icon-globe"></i><a href="#">www.yoursite.com</a></li>
+            <li><i class="icon-map"></i><p>198 West 21th Street, Suite 721 New York NY 10016</p></li>
+            <li><i class="icon-phone"></i><p>+ 1235 2355 98</p></li>
+            <li><i class="icon-envelope"></i><a href="#"><p style="color:#27E1CE">info@yoursite.com</p></a></li>
+            <li><i class="icon-globe"></i><a href="#"><p style="color:#27E1CE">www.yoursite.com</p></a></li>
           </ul>
         </div>
+
         <div class="col-md-8 col-md-push-1 col-sm-12 col-sm-push-0 col-xs-12 col-xs-push-0">
-          <div class="row">
+          <div class="row" style="margin-top: 30px">
             <div class="col-md-6">
               <div class="form-group">
                 <input class="form-control" placeholder="Nome" type="text">
@@ -278,43 +278,25 @@
 <!-- contact section --> 
 
 <!-- Footer section -->
-<footer class="footer">
-  <div class="footer-top section">
-    <div class="container">
-      <div class="row">
-        <div class="footer-col col-md-6">
-          <h5>Our Office Location</h5>
-          <p>Collins Street West Victoria 8007 Australia.<br>
-            1800 1234 56789 / 98532100987<br>
-            support@lexis.com</p>
-          <p>Copyright © 2015 Lexis Inc. All Rights Reserved. Made with <i class="fa fa-heart pulse"></i> by <a href="http://www.designstub.com/">Designstub</a></p>
+<footer id="footer" class="footer">
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3 col-sm-12 col-xs-12">
+                <div class="main-footer">
+
+                    <p class="text-center">© 2017 / <a id="eject" target="_blank" href="http://ejectufrn.com.br/">EJECT</a></p>
+
+                    <div id="social" class="social">
+                      <a href="www.facebook.com/aquaintegrada/"><i class="icon-facebook"></i></a>
+                      <a href="www.instagram.com/aquaculturaintegrada/"><i class="icon-instagram"></i></a>
+                    </div>
+
+                </div>
+            </div>
         </div>
-        <div class="footer-col col-md-3">
-          <h5>Services We Offer</h5>
-          <p>
-          <ul>
-            <li><a href="#">Digital Strategy</a></li>
-            <li><a href="#">Websites</a></li>
-            <li><a href="#">Videography</a></li>
-            <li><a href="#">Social Media</a></li>
-            <li><a href="#">User Experience</a></li>
-          </ul>
-          </p>
-        </div>
-        <div class="footer-col col-md-3">
-          <h5>Share with Love</h5>
-          <ul class="footer-share">
-            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-          </ul>
-        </div>
-      </div>
     </div>
-  </div>
-  <!-- footer top --> 
-  
+</footer>
+
 </footer>
 <!-- Footer section --> 
 <!-- JS FILES --> 

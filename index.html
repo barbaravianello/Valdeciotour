@@ -22,6 +22,7 @@
 <link rel="stylesheet" href="css/font-icon.css">
 <link rel="stylesheet" href="css/animate.min.css">
 <link rel="stylesheet" href="css/icomoon.css">
+<link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 </head>
 
@@ -92,111 +93,98 @@
     <div class="row no-gutter">
     <h3 style="text-align: center;" class="titulos" id="margem-pacotes"> CONHEÇA NOSSOS PACOTES</h3>
     <br>
-<!-- TESTE-->
+
 <div class="controls">
-  <label>Filter:</label>
-  
-  <select id="FilterSelect">
-    <option value="all">All</option>
-    <option value=".category-1">Category 1</option>
-    <option value=".category-2">Category 2</option>
-  </select>
-  
-  <label>Sort:</label>
-  
-  <select id="SortSelect">
-    <option value="myorder:asc">Asc</option>
-    <option value="myorder:desc">Desc</option>
-  </select>
-</div>
-<div id="Container" class="container">
-  <div class="mix category-1" data-myorder="1"></div>
-  <div class="mix category-1" data-myorder="2"></div>
-  <div class="mix category-1" data-myorder="3"></div>
-  <div class="mix category-2" data-myorder="4"></div>
-  <div class="mix category-1" data-myorder="5"></div>
-  <div class="mix category-1" data-myorder="6"></div>
-  <div class="mix category-2" data-myorder="7"></div>
-  <div class="mix category-2" data-myorder="8"></div>
-  
-  <div class="gap"></div>
-  <div class="gap"></div>
-</div>
+  <div class="filters text-center">
+    <ul class="nav nav-pills">
+      <li class="active"><a href="#" data-filter="*">Todos</a></li>
+      <li><a href="#" data-filter=".ida">Ida</a></li>
+      <li><a href="#" data-filter=".idavolta">Ida e Volta</a></li>
+    </ul>
+  </div>
 
-<!-- TESTE-->
+  <style type="text/css">
+    .isotope-item{
+      margin-bottom:0px !important;
+      z-index: 0px !important;
+    }
+  </style>
 
-      <div class="col-lg-3 col-md-6 col-sm-6 work mix category-1" data-myorder="1"> <a href="images/work-1.jpg" class="work-box"> <img src="images/1.jpg" alt="">
-        <div class="overlay">
-          <div class="overlay-caption">
-            <h5>LUGAR 1</h5>
-            <p>Viagem em 13/02/13</p>
+  <div class="isotope-container row grid-space-20">
+    <div class="col-lg-3 col-md-6 col-sm-6 work isotope-item ida"> <a href="images/1.jpg" class="work-box"> <img src="images/1.jpg" alt="">
+          <div class="overlay">
+            <div class="overlay-caption">
+              <h5>LUGAR 1</h5>
+              <p>Viagem em 13/02/13</p>
+            </div>
           </div>
-        </div>
-        <!-- overlay --> 
-        </a> </div>
-      <div class="col-lg-3 col-md-6 col-sm-6 work mix category-2" data-myorder="2"> <a href="images/work-2.jpg" class="work-box"> <img src="images/2.jpg" alt="">
-        <div class="overlay">
-          <div class="overlay-caption">
-            <h5>LUGAR 2</h5>
-            <p>Viagem em 13/02/13</p>
+          <!-- overlay --> 
+          </a> </div>
+
+        <div class="col-lg-3 col-md-6 col-sm-6 work isotope-item idavolta" data-myorder="2"> <a href="images/2.jpg" class="work-box"> <img src="images/2.jpg" alt="">
+          <div class="overlay">
+            <div class="overlay-caption">
+              <h5>LUGAR 2</h5>
+              <p>Viagem em 13/02/13</p>
+            </div>
           </div>
-        </div>
-        <!-- overlay --> 
-        </a> </div>
-      <div class="col-lg-3 col-md-6 col-sm-6 work"> <a href="images/work-3.jpg" class="work-box"> <img src="images/3.jpg" alt="">
-        <div class="overlay">
-          <div class="overlay-caption">
-            <h5>LUGAR 3</h5>
-            <p>Viagem em 13/02/13</p>
+          <!-- overlay --> 
+          </a> </div>
+        <div class="col-lg-3 col-md-6 col-sm-6 work isotope-item ida"> <a href="images/3.jpg" class="work-box"> <img src="images/3.jpg" alt="">
+          <div class="overlay">
+            <div class="overlay-caption">
+              <h5>LUGAR 3</h5>
+              <p>Viagem em 13/02/13</p>
+            </div>
           </div>
-        </div>
-        <!-- overlay --> 
-        </a> </div>
-      <div class="col-lg-3 col-md-6 col-sm-6 work"> <a href="images/work-4.jpg" class="work-box"> <img src="images/4.jpg" alt="">
-        <div class="overlay">
-          <div class="overlay-caption">
-            <h5>LUGAR 4</h5>
-            <p>Viagem em 13/02/13</p>
+          <!-- overlay --> 
+          </a> </div>
+        <div class="col-lg-3 col-md-6 col-sm-6 work isotope-item ida"> <a href="images/4.jpg" class="work-box"> <img src="images/4.jpg" alt="">
+          <div class="overlay">
+            <div class="overlay-caption">
+              <h5>LUGAR 4</h5>
+              <p>Viagem em 13/02/13</p>
+            </div>
           </div>
-        </div>
-        <!-- overlay --> 
-        </a> </div>
-      <div class="col-lg-3 col-md-6 col-sm-6 work"> <a href="images/work-5.jpg" class="work-box"> <img src="images/5.jpg" alt="">
-        <div class="overlay">
-          <div class="overlay-caption">
-            <h5>LUGAR 5</h5>
-            <p>Viagem em 13/02/13</p>
+          <!-- overlay --> 
+          </a> </div>
+        <div class="col-lg-3 col-md-6 col-sm-6 work isotope-item idavolta"> <a href="images/5.jpg" class="work-box"> <img src="images/5.jpg" alt="">
+          <div class="overlay">
+            <div class="overlay-caption">
+              <h5>LUGAR 5</h5>
+              <p>Viagem em 13/02/13</p>
+            </div>
           </div>
-        </div>
-        <!-- overlay --> 
-        </a> </div>
-      <div class="col-lg-3 col-md-6 col-sm-6 work"> <a href="images/work-6.jpg" class="work-box"> <img src="images/6.jpg" alt="">
-        <div class="overlay">
-          <div class="overlay-caption">
-            <h5>LUGAR 6</h5>
-            <p>Viagem em 13/02/13</p>
+          <!-- overlay --> 
+          </a> </div>
+        <div class="col-lg-3 col-md-6 col-sm-6 work isotope-item idavolta"> <a href="images/6.jpg" class="work-box"> <img src="images/6.jpg" alt="">
+          <div class="overlay">
+            <div class="overlay-caption">
+              <h5>LUGAR 6</h5>
+              <p>Viagem em 13/02/13</p>
+            </div>
           </div>
-        </div>
-        <!-- overlay --> 
-        </a> </div>
-      <div class="col-lg-3 col-md-6 col-sm-6 work"> <a href="images/work-7.jpg" class="work-box"> <img src="images/7.jpg" alt="">
-        <div class="overlay">
-          <div class="overlay-caption">
-            <h5>LUGAR 7</h5>
-            <p>Viagem em 13/02/13</p>
+          <!-- overlay --> 
+          </a> </div>
+        <div class="col-lg-3 col-md-6 col-sm-6 work isotope-item idavolta"> <a href="images/7.jpg" class="work-box"> <img src="images/7.jpg" alt="">
+          <div class="overlay">
+            <div class="overlay-caption">
+              <h5>LUGAR 7</h5>
+              <p>Viagem em 13/02/13</p>
+            </div>
           </div>
-        </div>
-        <!-- overlay --> 
-        </a> </div>
-      <div class="col-lg-3 col-md-6 col-sm-6 work"> <a href="images/work-8.jpg" class="work-box"> <img src="images/8.jpg" alt="">
-        <div class="overlay">
-          <div class="overlay-caption">
-            <h5>LUGAR 8</h5>
-            <p>Viagem em 13/02/13</p>
+          <!-- overlay --> 
+          </a> </div>
+        <div class="col-lg-3 col-md-6 col-sm-6 work isotope-item ida"> <a href="images/8.jpg" class="work-box"> <img src="images/8.jpg" alt="">
+          <div class="overlay">
+            <div class="overlay-caption">
+              <h5>LUGAR 8</h5>
+              <p>Viagem em 13/02/13</p>
+            </div>
           </div>
-        </div>
-        <!-- overlay --> 
-        </a> </div>
+          <!-- overlay --> 
+          </a> </div>
+      </div>
     </div>
   </div>
 </section>
@@ -307,12 +295,35 @@
 <script src="js/retina.min.js"></script> 
 <script src="js/modernizr.js"></script> 
 <script src="js/main.js"></script> 
+<script src="js/jquery.isotope.js"></script>
 <script type="text/javascript" src="js/jquery.contact.js"></script>
 </body>
 </html>
 
 
 <script>
+
+    if ($('.isotope-container').length>0) {
+      $(window).load(function() {
+        $('.isotope-container').fadeIn();
+        var $container = $('.isotope-container').isotope({
+          itemSelector: '.isotope-item',
+          layoutMode: 'masonry',
+          transitionDuration: '0.6s',
+          filter: "*"
+        });
+        // filter items on button click
+        $('.filters').on( 'click', 'ul.nav li a', function() {
+          var filterValue = $(this).attr('data-filter');
+          $(".filters").find("li.active").removeClass("active");
+          $(this).parent().addClass("active");
+          $container.isotope({ filter: filterValue });
+          return false;
+        });
+      });
+    };
+
+
     $("#slideshow").owlCarousel({
             navigation : true, // Show next and prev buttons
             slideSpeed : 200,

@@ -47,6 +47,7 @@ $(document).ready(function() {
 	$('.nav-toggle').on('click', function() {
 		$(this).toggleClass('close-nav');
 		nav.toggleClass('open');
+		$(window).scrollTop(0);
 		return false;
 	});	
 	nav.find('a').on('click', function() {

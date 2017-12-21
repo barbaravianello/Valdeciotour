@@ -10,8 +10,8 @@
 	Typography
 -------------------------------------------------------------------------------*/
 
-@import url(http://fonts.googleapis.com/css?family=Open%20Sans:300,400,500,600,700);
-@import url(http://fonts.googleapis.com/css?family=Merriweather:300,400,500,600,700);
+@import url(https://fonts.googleapis.com/css?family=Open%20Sans:300,400,500,600,700);
+@import url(https://fonts.googleapis.com/css?family=Merriweather:300,400,500,600,700);
 p {
 	font-size: 13px;
 	line-height: 22.4px;
@@ -109,7 +109,7 @@ ul li {
 #header .header-content {
 	margin: 0 auto;
 	max-width: 1170px;
-	padding: 60px 0;
+	padding: 45px 0;
 	width: 100%;
 	-moz-transition: padding 0.3s;
 	-o-transition: padding 0.3s;

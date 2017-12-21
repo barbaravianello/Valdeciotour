@@ -1381,7 +1381,7 @@ input[type="button"].btn-block {
     padding-top:50px;
     padding-bottom:50px;
     color:#fff;
-    background:#262d42;
+    background:#0a0a0af2;
 }
 
 #social {
@@ -2165,3 +2165,24 @@ button + label{
 #margem-pacotes {
 	margin-top: 7%;
 }
+
+
+/* ------------------------------------------------------------------------------
+	Itens da seção de Pacotes
+-------------------------------------------------------------------------------*/	
+
+.isotope-item{
+  margin-bottom:0px !important;
+  z-index: 0px !important;
+}
+
+/* ------------------------------------------------------------------------------
+	Itens da seção de Galeria
+-------------------------------------------------------------------------------*/	
+
+.item img{
+  display: block;
+  height: 280px;
+  max-width: 100%
+}
+

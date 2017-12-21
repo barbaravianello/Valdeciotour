@@ -10,7 +10,7 @@
 .fancybox-nav span,
 .fancybox-tmp
 {
-	padding: 0;
+	padding: 0 !important;
 	margin: 0;
 	border: 0;
 	outline: none;

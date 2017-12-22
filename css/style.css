@@ -72,24 +72,6 @@ body, html{
 	overflow-y: auto;
 }
 
-#right {
-	display: inline-block;
-	float: right;
-	padding-left: 25px;
-	padding-right: 25px;
-	text-align: justify;
-}
-
-#left {
-	padding-top: 10px;
-	padding-bottom: 0px;
-	display: inline-block;
-	padding-left: 25px;
-	padding-right: 25px;
-	text-align: justify;
-	background-color: #d8d8d8c2;
-}
-
 .modal-header {
 	background-color: #082240;
 	color: #ffffff;

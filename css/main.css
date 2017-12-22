@@ -44,7 +44,7 @@ h5 {
 	font-weight: 700;
 }
 .btn {
-	background-color: #17a0f5;
+	background-color: #3bc492;
 	color: #fff;
 	font-size: 13px;
 	font-weight: 600;
@@ -56,7 +56,7 @@ h5 {
 	text-transform: uppercase;
 }
 .btn:hover, .btn:focus {
-	background-color: #29f6f8;
+	background-color: #3d3d3d;
 	color: #fff;
 }
 .btn-large {
@@ -353,7 +353,7 @@ ul li {
 	 QUEM SOMOS
 -------------------------------------------------------------------------------*/
 #fh5co-why-us, .fh5co-services {
-  padding: 7em 0;
+  /*padding: 7em 0;*/
 }
 @media screen and (max-width: 768px) {
   #fh5co-why-us, .fh5co-services {
@@ -575,8 +575,7 @@ padding:15px 30px 15px 30px;
 }
 
 .fh5co-contact {
-  padding-top: 2em;
-  padding-bottom: 7em;
+  padding: 7em 0;
 }
 @media screen and (max-width: 768px) {
   .fh5co-contact {
@@ -587,21 +586,23 @@ padding:15px 30px 15px 30px;
 .contact-info {
   margin-bottom: 4em;
   padding: 0;
-  list-style: none;
-  margin-bottom: 3%;
-  position: relative;
-  padding-left: 40px;
-  display: inline-block;
 }
 
-.contact-info i {
+.contact-info li {
+  list-style: none;
+  margin: 30px 0 30px 0;
+  position: relative;
+  padding-left: 40px;
+}
+
+.contact-info li i {
   position: absolute;
   left: 0;
   font-size: 22px;
   color: #27E1CE;
 }
 
-.contact-info a {
+.contact-info li a {
   color: #27E1CE;
 }
 
@@ -1382,7 +1383,7 @@ input[type="button"].btn-block {
     padding-top:50px;
     padding-bottom:50px;
     color:#fff;
-    background:#333333;
+    background:#0a0a0af2;
 }
 
 #social {
@@ -1560,7 +1561,7 @@ input[type="button"].btn-block {
   margin-left: -25px;
   height: 2px;
   left: 50%;
-  background: #00B906;
+  background: #17a0f5;
 }
 .gtco-heading h2.gtco-left:before {
   left: 0;
@@ -2036,7 +2037,7 @@ body, button{
 
 .controls{
   padding: 2%;
-  background: #333;
+  background: white;
   color: #eee;
 }
 
@@ -2160,7 +2161,7 @@ button + label{
     margin-left: -25px !important;
     height: 2px !important;
     left: 50% !important;
-    background: #00B906 !important;
+    background: #17a0f5 !important;
 }
 
 #margem-quemsomos{

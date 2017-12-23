@@ -8,6 +8,13 @@ $(document).ready(function() {
 		} else {
 			$('#header').removeClass('fixed');
 		}
+
+		//Adicionando diferenciação de cores ao fim da navbar
+		if (scroll != 0) {
+	     	$("#header").css("box-shadow","0 3px 5px rgba(0, 0, 0, 0.2)");
+	    }else{
+	    	$("#header").css("box-shadow","");
+	    }
 	});
 
 	// Fancybox

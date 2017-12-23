@@ -44,7 +44,7 @@ h5 {
 	font-weight: 700;
 }
 .btn {
-	background-color: #3bc492;
+	background-color: #17a0f5;
 	color: #fff;
 	font-size: 13px;
 	font-weight: 600;
@@ -56,7 +56,7 @@ h5 {
 	text-transform: uppercase;
 }
 .btn:hover, .btn:focus {
-	background-color: #3d3d3d;
+	background-color: #29f6f8;
 	color: #fff;
 }
 .btn-large {
@@ -131,7 +131,7 @@ ul li {
 	background-color: #fff;
 }
 #header.fixed a {
-	color: #000;
+	color: #333333;
 }
 #header.fixed .header-content {
 	border-bottom: 0;
@@ -575,7 +575,7 @@ padding:15px 30px 15px 30px;
 }
 
 .fh5co-contact {
-  padding: 7em 0;
+  padding: 2em 0;
 }
 @media screen and (max-width: 768px) {
   .fh5co-contact {
@@ -586,26 +586,23 @@ padding:15px 30px 15px 30px;
 .contact-info {
   margin-bottom: 4em;
   padding: 0;
-}
-
-.contact-info li {
   list-style: none;
-  margin: 30px 0 30px 0;
+  margin-bottom: 3%;
   position: relative;
   padding-left: 40px;
+  display: inline-block;
 }
 
-.contact-info li i {
+.contact-info i {
   position: absolute;
   left: 0;
   font-size: 22px;
   color: #27E1CE;
 }
 
-.contact-info li a {
+.contact-info a {
   color: #27E1CE;
 }
-
 
 /* ------- CSS DO CONTATO ------ */
 .form-group {
@@ -1383,7 +1380,7 @@ input[type="button"].btn-block {
     padding-top:50px;
     padding-bottom:50px;
     color:#fff;
-    background:#0a0a0af2;
+    background:#333333;
 }
 
 #social {
@@ -1561,7 +1558,7 @@ input[type="button"].btn-block {
   margin-left: -25px;
   height: 2px;
   left: 50%;
-  background: #17a0f5;
+  background: #00B906;
 }
 .gtco-heading h2.gtco-left:before {
   left: 0;

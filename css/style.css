@@ -1,8 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,700,300,600,800,400);
+@import url('https://fonts.googleapis.com/css?family=Hind');
 
 body, html{
-	font-family: 'Open sans', 'Lato', sans-serif;
+	font-family: 'Hind, 'Open sans', 'Lato', sans-serif;
 	text-rendering: optimizeLegibility !important;
 	-webkit-font-smoothing: antialiased !important;
 	color: #5a5a5a;
@@ -1128,4 +1129,161 @@ Foi adicionado:     margin-top: 10px;
 */
 #footer i.fa:hover{
 	color: #082240;
+}
+
+/* Botao de volta ao topo */
+
+a[href="#top"]{
+    padding:10px;
+    position:fixed;
+    top: 90%;
+    right:40px;
+    display:none;
+    font-size: 30px;
+}
+a[href="#top"]:hover{
+    text-decoration:none;
+}
+
+.glyphicon {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.glyphicon-chevron-up:before {
+  content: "\e113";
+}
+
+#volta-ao-topo{
+	color: #fa0a0c;
+    border-radius: 50%;
+}
+
+#volta-ao-topo:hover{
+	color: #fff;
+	background-color: #fa0a0c;
+    border-radius: 50%;
+}
+
+@media screen and (min-width:320px) { 
+	.fonte-contato{
+		font-size: 13px;
+	}
+}
+@media screen and (min-width:480px) { 
+	.fonte-contato{
+		font-size: 13px;
+	}
+}
+@media screen and (min-width:600px) {
+	.fonte-contato{
+		font-size: 13px;
+	}
+}
+@media screen and (min-width:768px) {
+	.fonte-contato{
+		font-size: 13px;
+	}
+}
+@media screen and (min-width:992px) { 
+	.fonte-contato{
+		font-size: 13px;
+	}
+}
+
+
+
+
+
+
+@media screen and (min-width:320px) { 
+	#mapa{
+		padding-left: 8%;
+	}
+}
+@media screen and (min-width:480px) { 
+	#mapa{
+		padding-left: 17%;
+	}
+}
+@media screen and (min-width:600px) {
+	#mapa{
+		padding-left: 23%;
+	}
+}
+@media screen and (min-width:768px) {
+	#mapa{
+		padding-left: 23%;
+	}
+}
+@media screen and (min-width:992px) { 
+	#mapa{
+		padding-left: 13%;
+	}
+}
+
+
+
+
+@media screen and (min-width:320px) { 
+	#contact-phone{
+		padding-left: 45%;
+	}
+	#contact-number{
+		padding-left: 28%;
+	}
+	#contact-email{
+		padding-left: 9%;
+	}
+}
+@media screen and (min-width:480px) { 
+	#contact-phone{
+		padding-left: 58%;
+	}
+	#contact-number{
+		padding-left: 33%;
+	}
+	#contact-email{
+		padding-left: 9%;
+	}
+}
+@media screen and (min-width:600px) {
+	#contact-phone{
+		padding-left: 67%;
+	}
+	#contact-number{
+		padding-left: 37%;
+	}
+	#contact-email{
+		padding-left: 9%;
+	}
+}
+@media screen and (min-width:768px) {
+	#contact-phone{
+		padding-left: 70%;
+	}
+	#contact-number{
+		padding-left: 38%;
+	}
+	#contact-email{
+		padding-left: 9%;
+	}
+}
+@media screen and (min-width:992px) { 
+	#contact-phone{
+		padding-left: 75%;
+	}
+	#contact-number{
+		padding-left: 40%;
+	}
+	#contact-email{
+		padding-left: 2%;
+	}
 }

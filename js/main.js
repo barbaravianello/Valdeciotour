@@ -1,5 +1,7 @@
 $(document).ready(function() {
 	// Header Scroll
+	$("#volta-ao-topo").css("visibility","hidden");
+	
 	$(window).on('scroll', function() {
 		var scroll = $(window).scrollTop();
 
@@ -12,8 +14,10 @@ $(document).ready(function() {
 		//Adicionando diferenciação de cores ao fim da navbar
 		if (scroll != 0) {
 	     	$("#header").css("box-shadow","0 3px 5px rgba(0, 0, 0, 0.2)");
+	     	$("#volta-ao-topo").css("visibility","");
 	    }else{
 	    	$("#header").css("box-shadow","");
+	    	$("#volta-ao-topo").css("visibility","hidden");
 	    }
 	});
 

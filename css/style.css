@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css?family=Hind');
 
 body, html{
-	font-family: 'Hind, 'Open sans', 'Lato', sans-serif;
+	font-family: 'Hind', 'Open sans', 'Lato', sans-serif;
 	text-rendering: optimizeLegibility !important;
 	-webkit-font-smoothing: antialiased !important;
 	color: #5a5a5a;

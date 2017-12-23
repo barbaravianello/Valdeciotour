@@ -1611,7 +1611,7 @@ input[type="button"].btn-block {
 	margin-left: -3%;
     margin-right: -3%;
     vertical-align: middle;
-    margin-top: -15%;
+    margin-top: -20%;
 }
 
 .owl-carousel-posts .owl-controls .owl-nav .owl-next,
@@ -2211,6 +2211,33 @@ button + label{
 	}
 }
 
+@media all and (min-width: 320px) and (max-width: 385px){
+	.owl-nav {
+		margin-left: -6%;
+    	margin-right: -6%;
+    	margin-top: -55%;
+	}
+}
+
+@media all and (min-width: 386px) and (max-width: 620px){
+	.owl-nav {
+		margin-left: -6%;
+    	margin-right: -6%;
+    	margin-top: -40%;
+	}
+}
+
+
+@media all and (min-width: 621px) and (max-width: 1000px){
+	.owl-nav {
+		margin-left: -6%;
+    	margin-right: -6%;
+    	margin-top: -25%;
+	}
+}
+
+
+
 /* ------------------------------------------------------------------------------
 	Modal de Pacotes
 -------------------------------------------------------------------------------*/	
@@ -2276,4 +2303,3 @@ button + label{
 		width:100%;
 	}
 }
-

@@ -1425,7 +1425,7 @@ input[type="button"].btn-block {
 
 #gtco-products {
   background: #efefef;
-  height: 650px;
+  height: 620px;
 }
 #gtco-products .testimony-slide {
   text-align: center;
@@ -1530,6 +1530,7 @@ input[type="button"].btn-block {
 }
 @media screen and (max-width: 768px) {
   .gtco-heading {
+	margin-top: 15%;  
     margin-bottom: 3em;
   }
 }
@@ -1611,7 +1612,7 @@ input[type="button"].btn-block {
 	margin-left: -3%;
     margin-right: -3%;
     vertical-align: middle;
-    margin-top: -20%;
+    margin-top: -14%;
 }
 
 .owl-carousel-posts .owl-controls .owl-nav .owl-next,

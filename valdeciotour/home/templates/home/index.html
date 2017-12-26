@@ -1,87 +1,173 @@
 {% extends 'home/base.html'%}
+
 {% load static %}
+
 {% block content %}
 
 <!-- banner text -->
   <div class="container">
     <div class="col-md-10 col-md-offset-1">
       <div class="banner-text text-center">
-        <h1>VALDECIO TOUR</h1>
-        <p>Lorem ipsum dolor sit ametcursus magna vel scelerisque Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna vel scelerisque nisl consectetur et.nisl consectetur et.</p>
-        <a href="#fh5co-why-us" class="btn btn-large">SAIBA MAIS</a> </div>
+      <h1>VALDECIO TOUR</h1>
+      <p>Lorem ipsum dolor sit ametcursus magna vel scelerisque Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna vel scelerisque nisl consectetur et.nisl consectetur et.</p>
+      <a href="#fh5co-why-us" class="btn btn-large">SAIBA MAIS</a> </div>
       <!-- banner text --> 
     </div>
   </div>
+
 </section>
-<!-- header section --> 
+<!--  FIM DA SEÇÃO INICIAL  -->
+
+<!-- BOTÃO DE VOLTA AO TOPO -->
+    <a id="volta-ao-topo" href="#top" class="glyphicon glyphicon-chevron-up" style="display: block;z-index: 3;"></a> 
+  <!-- FIM DO BOTÃO DE VOLTA AO TOPO -->
 
 
 
-<!-- QUEM SOMOS -->
+<!-- SEÇÃO QUEM SOMOS 
+================================================== -->
+
 <div id="fh5co-why-us" class="animate-box">
   <div class="container">
     <div class="row">
+
       <div class="col-md-6 col-md-offset-3 text-center fh5co-heading">
-        <h3 class="titulos" id="margem-quemsomos">QUEM SOMOS?</h3> <br>
+        <h3 class="titulos" id="margem-quemsomos">QUEM SOMOS?</h3> 
+        <br>
+        <br>
         <p>Start Bootstrap has everything you need to get your new website up and in no time! All of the templates and themes on Start Bootstrap are open source, free to download, and easy to use. No strings attached!</p>
         <br>
-        <h3 class="titulos" id="margem-pq">POR QUE CONTRATAR A VALDECIO TOUR?</h3> <br>
-      </div>
-      <div class="col-md-4 text-center item-block">
-        <span class="icon"><img src="{% static 'images/30.svg' %}" alt="Motivo 1" class="img-responsive"></span>
-        <h3>MOTIVO 1</h3>
-        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove.</p>
-      </div>
-      <div class="col-md-4 text-center item-block">
-        <span class="icon"><img src="{% static 'images/18.svg' %}" alt="Motivo 2" class="img-responsive"></span>
-        <h3>MOTIVO 2</h3>
-        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove.</p>
-      </div>
-      <div class="col-md-4 text-center item-block">
-        <span class="icon"><img src="{% static 'images/27.svg' %}" alt="Motivo 3" class="img-responsive"></span>
-        <h3>MOTIVO 3</h3>
-        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove.</p>
+        <br>
       </div>
     </div>
   </div>
+
+  <!-- FIM DO QUEM SOMOS -->
+
+
+  <!-- SEÇÃO POR QUE CONTRATAR A VALDECIO TOUR 
+  ================================================== -->
+
+  <div class="container" style="background-image: url(images/banner.jpg) ;width: 100%;">
+    <br>
+    <br>
+   <h3 class="titulos" id="margem-pq" style="text-align: center;color:white !important; margin-top:1%;">POR QUE CONTRATAR A VALDECIO TOUR?</h3> 
+   <br>
+   <br>
+
+    <div class="col-md-4 text-center item-block" style="padding-top: 5%; padding-bottom: 5%;">        
+      <span class="icon">
+        <img src="images/bar-chart.png" alt="Free HTML5 Templates" class="img-responsive">
+      </span>
+      <h3 style="color:white;">MOTIVO 1</h3>
+      <p style="color:white;">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove.</p>
+    </div>
+
+    <div class="col-md-4 text-center item-block" style="padding-top: 5%; padding-bottom: 5%;">
+      <span class="icon">
+        <img src="images/cooperate.png" alt="Free HTML5 Templates" class="img-responsive">
+      </span>
+      <h3 style="color:white;">MOTIVO 2</h3>
+      <p style="color:white;">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove.</p>
+    </div>
+
+    <div class="col-md-4 text-center item-block" style="padding-top: 5%; padding-bottom: 5%;">
+      <span class="icon">
+      <img src="images/warning.png" alt="Free HTML5 Templates" class="img-responsive">
+      </span>
+      <h3 style="color:white;">MOTIVO 3</h3>
+      <p style="color:white;">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove.</p>
+    </div>
+  </div> 
 </div>
-<!-- QUEM SOMOS --> 
+<!-- FIM DO POR QUE CONTRATAR A VALDECIO TOUR -->
 
 
+<!-- SEÇÃO PACOTES 
+================================================== -->
 
-<!-- PACOTES -->
 <section id="works" class="works section no-padding">
   <div class="container-fluid">
     <div class="row no-gutter">
-      <h3 style="text-align: center;" class="titulos" id="margem-pacotes"> CONHEÇA NOSSOS PACOTES</h3>
+      <h3 id="packs" style=" text-align:center; padding-top: 2%;" class="titulos" id="margem-pacotes" > 
+      CONHEÇA NOSSOS PACOTES
+      </h3>
       <br>
-		<div class="controls">
-			<div class="filters text-center">
-			  <ul class="nav nav-pills">
-				<li class="active"><a href="#" data-filter="*">Todos</a></li>
-				<li><a href="#" data-filter=".ida">Ida</a></li>
-				<li><a href="#" data-filter=".idavolta">Ida e Volta</a></li>
-			  </ul>
-			</div>
-			<div class="isotope-container row grid-space-20">
-				{% for item in packages %}
-				<div class=" mix category-2 col-lg-3 col-md-6 col-sm-6 work isotope-item {{ item.travel_type }}"> 
-				  <a href="{{ item.image.url }}" class="work-box"> <img src="{{ item.image.url }}" alt="">
-						<div class="overlay">
-						  <div class="overlay-caption">
-								<h5>{{ item.title }}</h5>
-								<p>Viagem em {{ item.travel_date }}</p>
-						  </div>
-						</div>
-					</a>
-				 </div>  
-				{% endfor %}
-			</div>
-		</div>
-     </div>
+
+      <!-- Botões para realizar o filtro -->
+      <div class="controls">
+      <div class="filters text-center">
+        <ul class="nav nav-pills">
+        <li class="active"><a href="#" data-filter="*">Todos</a></li>
+        <li><a href="#" data-filter=".ida">Ida</a></li>
+        <li><a href="#" data-filter=".idavolta">Ida e Volta</a></li>
+        </ul>
+      </div>
+      <!-- Fim da inserção dos botões -->
+
+      <div class="isotope-container row grid-space-20">
+        
+        {% for package in packages %}
+        <!-- ITEM 1 -->
+        <div class="col-lg-3 col-md-6 col-sm-6 work isotope-item {{ package.travel_type }}"> 
+          <a href="" class="work-box" data-toggle="modal" data-target="#modal{{ package.slug }}"> 
+            <img src="{{ package.image.url }}" alt="" style="height: 300px">
+            <!-- overlay --> 
+            <div class="overlay">
+              <div class="overlay-caption">
+                <h5>{{ package.title }}</h5>
+                <p>{{ package.travel_date }}</p>
+              </div>
+            </div>
+            <!-- overlay --> 
+          </a>
+        </div>
+        <!-- FIM DO ITEM 1 -->
+        {% endfor %}
+
+        <!-- MODAIS PARA SEÇÃO DE PACOTES
+        ================================================== -->
+        {% for package in packages %}
+        <!-- MODAL 1 -->
+        <div class="modal fade" id="modal{{ package.slug }}" role="dialog" style="margin:auto">
+          <div class="modal-dialog modal-md" id="modal-md">
+            <div class="modal-content">
+              <div class="col-md-6">
+                <img src="{{ package.image.url }}" alt="" style="height: 300px">
+              </div>
+              <div class="col-md-6" id="right">
+                <button type="button" class="close" data-dismiss="modal" style="padding-right: 0px;
+            padding-top: 10px;">&times;</button>
+                <br>
+                <h4 align="center">{{ package.title }}</h4>
+                <br>
+                <p> {{ package.description }}</p>
+                <p><span style="font-weight:700;">Data de Partida:</span> {{ package.travel_date }}</p>
+                <p><span style="font-weight:700;">Data de Retorno:</span> {{ package.arrival_date }}</p>
+                <p><span style="font-weight:700;">Preço:</span> {{ package.price}}</p>
+              </div>
+              <div class="col-md-12" id="left">
+                <h4 align="center" style="padding-top: -5px">QUE TAL FAZER SUA RESERVA?</h4>
+                <form class="conForm col-md-12">
+                <input type="text" name="name" placeholder="Digite seu nome">
+                <br>
+                <input type="text" name="email" placeholder="Nos informe um e-mail para contato">
+                <br>
+                <button class="submitBnt" data-dismiss="modal">Desejo viajar para {{ package.title }}</button>
+                <br>
+                <br>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- FIM DO MODAL 1 -->
+        {% endfor %}
+      </div>
+    </div>
   </div>
 </section>
-<!-- PACOTES --> 
+<!-- FIM DA SEÇÃO PACOTES --> 
 
 
 

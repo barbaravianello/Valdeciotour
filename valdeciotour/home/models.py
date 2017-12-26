@@ -7,8 +7,9 @@ class Package(models.Model):
 	slug = models.SlugField('Atalho')
 	description = RichTextField('Descrição')
 	price = models.DecimalField('Preço', max_digits=7, decimal_places=2)
-	travel_date = models.DateField('Data da Viagem', null=True, blank=True)
-	
+	travel_date = models.DateField('Data da Partida', null=True, blank=True)
+	arrival_date = models.DateField('Data da Chegada', null=True, blank=True)
+    
 	ida = 'ida'
 	idavolta = 'idavolta'
 

@@ -48,7 +48,7 @@
   <!-- SEÇÃO POR QUE CONTRATAR A VALDECIO TOUR 
   ================================================== -->
 
-  <div class="container" style="background-image: url(images/banner.jpg) ;width: 100%;">
+  <div class="container" style="background-image: url({% static 'images/banner.jpg' %}) ;width: 100%;">
     <br>
     <br>
    <h3 class="titulos" id="margem-pq" style="text-align: center;color:white !important; margin-top:1%;">POR QUE CONTRATAR A VALDECIO TOUR?</h3> 
@@ -57,7 +57,7 @@
 
     <div class="col-md-4 text-center item-block" style="padding-top: 5%; padding-bottom: 5%;">        
       <span class="icon">
-        <img src="images/bar-chart.png" alt="Free HTML5 Templates" class="img-responsive">
+        <img src="{% static 'images/bar-chart.png' %}" alt="Free HTML5 Templates" class="img-responsive">
       </span>
       <h3 style="color:white;">MOTIVO 1</h3>
       <p style="color:white;">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove.</p>
@@ -65,7 +65,7 @@
 
     <div class="col-md-4 text-center item-block" style="padding-top: 5%; padding-bottom: 5%;">
       <span class="icon">
-        <img src="images/cooperate.png" alt="Free HTML5 Templates" class="img-responsive">
+        <img src="{% static 'images/cooperate.png' %}" alt="Free HTML5 Templates" class="img-responsive">
       </span>
       <h3 style="color:white;">MOTIVO 2</h3>
       <p style="color:white;">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove.</p>
@@ -73,7 +73,7 @@
 
     <div class="col-md-4 text-center item-block" style="padding-top: 5%; padding-bottom: 5%;">
       <span class="icon">
-      <img src="images/warning.png" alt="Free HTML5 Templates" class="img-responsive">
+      <img src="{% static 'images/warning.png' %}" alt="Free HTML5 Templates" class="img-responsive">
       </span>
       <h3 style="color:white;">MOTIVO 3</h3>
       <p style="color:white;">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove.</p>
@@ -141,7 +141,7 @@
                 <br>
                 <h4 align="center">{{ package.title }}</h4>
                 <br>
-                <p> {{ package.description }}</p>
+                <p> {{ package.description|safe|escape }} </p>
                 <p><span style="font-weight:700;">Data de Partida:</span> {{ package.travel_date }}</p>
                 <p><span style="font-weight:700;">Data de Retorno:</span> {{ package.arrival_date }}</p>
                 <p><span style="font-weight:700;">Preço:</span> {{ package.price}}</p>
@@ -171,83 +171,116 @@
 
 
 
+<!-- SEÇÃO GALERIA
+================================================== -->
+
 <div id="gtco-products" data-section="products">
-    <div class="gtco-container">
-      <div class="row">
-        <div class="col-md-8 col-md-offset-2 text-center gtco-heading">
-          <h2>GALERIA</h2>
-          <p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="owl-carousel owl-carousel-carousel">
-          <div class="item">
-            <img src="{% static 'images/img_1.jpg' %}" alt="Free HTML5 Bootstrap Template by GetTemplates.co">
-          </div>
-          <div class="item">
-            <img src="{% static 'images/img_2.jpg' %}" alt="Free HTML5 Bootstrap Template by GetTemplates.co">
-          </div>
-          <div class="item">
-            <img src="{% static 'images/img_3.jpg' %}" alt="Free HTML5 Bootstrap Template by GetTemplates.co">
-          </div>
-          <div class="item">
-            <img src="{% static 'images/img_4.jpg' %}" alt="Free HTML5 Bootstrap Template by GetTemplates.co">
-          </div>
-        </div>
+  <div class="gtco-container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2 text-center gtco-heading">
+        <h2>GALERIA</h2>
+        <p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
       </div>
     </div>
-  </div> 
-
-
-
-<!-- contact section -->
-<div class="fh5co-contact animate-box">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-3">
-          <h3>Contato</h3>
-          <ul class="contact-info">
-            <li><i class="icon-map"></i>198 West 21th Street, Suite 721 New York NY 10016</li>
-            <li><i class="icon-phone"></i>+ 1235 2355 98</li>
-            <li><i class="icon-envelope"></i><a href="#">info@yoursite.com</a></li>
-            <li><i class="icon-globe"></i><a href="#">www.yoursite.com</a></li>
-          </ul>
-        </div>
-        <div class="col-md-8 col-md-push-1 col-sm-12 col-sm-push-0 col-xs-12 col-xs-push-0">
-		<br>
-           <form method="POST" role="form">
-            <div class="row">
-              {% if is_valid%}
-                <script type="text/javascript">
-                  alert("Sua mensagem foi enviada com sucesso. A Valdécio Tour agradece pelo seu contato!");
-                </script>
-              {% endif %}
-              {% csrf_token %}
-              <fieldset>
-                {% for field in form %}
-              	{% if field.label == 'Nome' or field.label == 'E-mail'%}
-					<div class="col-md-6">
-						{{ field }}
-					</div>
-				{% else %}
-					<div class="col-md-12">
-						{{ field }}
-					</div>
-				{% endif %}
-                {% endfor %}
-              </fieldset>
-              <div class="col-md-12">
-                <div class="form-group">
-                  <input value="Enviar mensagem" class="btn btn-primary" type="submit">
+    <div class="row">
+      <div class="owl-carousel owl-carousel-carousel " style="    width: 80%;
+  margin-left: 10%;">
+       {% for item in gallery %}
+        <div class="item">
+          <div class="work isotope-item"> 
+            <a href="" class="work-box"> 
+              <img src={{ item.image.url }} alt="" style="max-height: 280px">
+              <!-- overlay -->
+              <div class="overlay">
+                <div class="overlay-caption">
+                  <h5>{{ item.title }} </h5>
+                  <div class="conForm">
+                    <button class="submitBnt" width=20>Veja mais</button>
+                  </div>
                 </div>
               </div>
-            </div>
-          </form>
+            <!-- overlay --> 
+            </a> 
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+<!-- FIM DA SEÇÃO GALERIA -->
+
+
+
+<!-- SEÇÃO CONTATO
+================================================== -->
+
+<div class="fh5co-contact animate-box">
+  <div class="container">
+    <div class="row">
+      <h3 class="titulos" style="text-align: center;">CONTATO</h3>            
+        <div class="contact-info col-md-6" id="contact-number">
+          <i class="icon-phone" id="contact-phone"></i><p>+ 1235 2355 98</p>
+        </div>
+        <div class="contact-info col-md-6">
+          <i class="icon-envelope" id="contact-email"></i><a href="#"><p style="color:#6c7279">info@yoursite.com</p></a>
+        </div>
+    </div>
+    <div class="row">
+      <!--
+      <div class="col-md-3">
+        <h3>Contato</h3>
+        <ul class="contact-info">
+          <li><i class="icon-map"></i><p>198 West 21th Street, Suite 721 New York NY 10016</p></li>
+          <li><i class="icon-phone"></i><p>+ 1235 2355 98</p></li>
+          <li><i class="icon-envelope"></i><a href="#"><p style="color:#27E1CE">info@yoursite.com</p></a></li>
+          <li><i class="icon-globe"></i><a href="#"><p style="color:#27E1CE">www.yoursite.com</p></a></li>
+        </ul>
+      </div>
+      -->
+
+      <div class="col-md-6 col-md-push-1 col-sm-12 col-sm-push-0 col-xs-12 col-xs-push-0">
+        <div class="row" style="margin-top: 15px">
+			<form role="form" method="POST">
+			  {% if is_valid %}
+				  <script type="text/javascript">
+					 alert("Sua mensagem foi enviada com sucesso. A Valdecio Tour agradece pelo seu contato!");
+				  </script>	
+			  {% endif %}
+			  {% csrf_token %}
+				  <fieldset>
+				  {% for field in form %}
+					{% if field.label == "Mensagem" %}
+						<div class="col-md-12">
+							{{ field }}
+						</div>
+					{% else %}
+						<div class="col-md-6">
+						 {{ field }}
+						</div>
+					{% endif %}
+				  {% if field.errors %}
+					<label for="errors">{{ field.errors }}</label><br><br>
+				  {% endif %}
+				  {% endfor %}
+				  </fieldset>  
+			  <div class="col-md-12">
+				<div class="form-group">
+				  <input value="Enviar mensagem" class="btn btn-primary" type="submit">
+				</div>
+			  </div>
+		   </form>
         </div>
       </div>
-    </div>  
-  </div>
-<!-- contact section --> 
+
+      <div class="col-md-6" id="mapa">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d496.1811094157565!2d-35.196915396494944!3d-5.792094122012815!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7b3001b81b9dbed%3A0x6f3cb33019dc1df4!2sEscola+Dom%C3%A9stica+de+Natal!5e0!3m2!1spt-BR!2sbr!4v1513910921914" width="320" height="280" frameborder="0" style="border:0;width:96%" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>  
+</div>
+<!-- FIM DA SEÇÃO CONTATO -->
+
 
 
 {% endblock %}

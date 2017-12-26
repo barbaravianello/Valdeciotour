@@ -1,13 +1,15 @@
 from django.shortcuts import render
-from home.models import Package
+from home.models import Package, Gallery
 from .forms import ContactValdeciotour
 
 def index(request): 
 
 	packages = Package.objects.all()
-
+	gallery = Gallery.objects.all()
+    
 	context = {
-		'packages': packages,	
+		'packages': packages,
+        'gallery': gallery,
 	}
 	
 	if request.method == 'POST':

@@ -1425,7 +1425,7 @@ input[type="button"].btn-block {
 
 #gtco-products {
   background: #efefef;
-  height: 650px;
+  height: 580px;
 }
 #gtco-products .testimony-slide {
   text-align: center;
@@ -1530,6 +1530,7 @@ input[type="button"].btn-block {
 }
 @media screen and (max-width: 768px) {
   .gtco-heading {
+	margin-top: 15%;
     margin-bottom: 3em;
   }
 }
@@ -2208,6 +2209,14 @@ button + label{
 @media all and (max-width: 1200px){
 	#gtco-products {
 		margin-top: 40px;
+		margin-bottom: 40px;
+	}
+}
+
+@media all and (max-width: 1024px){
+	#gtco-products {
+		margin-top: 10%;
+		margin-bottom: 10%;
 	}
 }
 

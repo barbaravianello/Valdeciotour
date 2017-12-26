@@ -10,8 +10,10 @@
 	Typography
 -------------------------------------------------------------------------------*/
 
-@import url(http://fonts.googleapis.com/css?family=Open%20Sans:300,400,500,600,700);
-@import url(http://fonts.googleapis.com/css?family=Merriweather:300,400,500,600,700);
+@import url(https://fonts.googleapis.com/css?family=Open%20Sans:300,400,500,600,700);
+@import url(https://fonts.googleapis.com/css?family=Merriweather:300,400,500,600,700);
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
 p {
 	font-size: 13px;
 	line-height: 22.4px;
@@ -42,7 +44,7 @@ h5 {
 	font-weight: 700;
 }
 .btn {
-	background-color: #3bc492;
+	background-color: #17a0f5;
 	color: #fff;
 	font-size: 13px;
 	font-weight: 600;
@@ -54,7 +56,7 @@ h5 {
 	text-transform: uppercase;
 }
 .btn:hover, .btn:focus {
-	background-color: #3d3d3d;
+	background-color: #29f6f8;
 	color: #fff;
 }
 .btn-large {
@@ -109,7 +111,7 @@ ul li {
 #header .header-content {
 	margin: 0 auto;
 	max-width: 1170px;
-	padding: 60px 0;
+	padding: 45px 0;
 	width: 100%;
 	-moz-transition: padding 0.3s;
 	-o-transition: padding 0.3s;
@@ -129,7 +131,7 @@ ul li {
 	background-color: #fff;
 }
 #header.fixed a {
-	color: #000;
+	color: #333333;
 }
 #header.fixed .header-content {
 	border-bottom: 0;
@@ -304,7 +306,7 @@ ul li {
 -------------------------------------------------------------------------------*/
 
 .banner {
-	background-image: url(../images/teste.jpg);
+	background-image: url(../images/13.png);
 	background-position: center top;
 	background-repeat: no-repeat;
 	-moz-background-size: cover;
@@ -351,7 +353,7 @@ ul li {
 	 QUEM SOMOS
 -------------------------------------------------------------------------------*/
 #fh5co-why-us, .fh5co-services {
-  padding: 3em 0;
+  /*padding: 7em 0;*/
 }
 @media screen and (max-width: 768px) {
   #fh5co-why-us, .fh5co-services {
@@ -522,17 +524,20 @@ ul li {
 .conForm p {
 	text-align: center;
 	margin: 7%;
+	color: #797979;
 }
 .conForm input {
+	background-color: transparent;
 	color: #797979;
-	padding: 15px 30px;
+	padding: 10px 10px;
 	border: none;
 	margin-right: 3%;
-	margin-bottom: 30px;
+	margin-bottom: 13px;
 	outline: none;
 	font-style: normal;
-	border-bottom: #e0e0e0 1px solid;
+	border-bottom: #3bc49287 2px solid;
 	font-size: 15px;
+	width: 55%;
 }
 .conForm input.noMarr {
 	margin-right: 0px;
@@ -552,17 +557,17 @@ ul li {
 .conForm .submitBnt {
 	background: #3bc492;
 	color: #fff;
-	margin-top: 30px;
+	margin-top: 10px;
 padding:15px 30px 15px 30px;
+	letter-spacing: 2px;
 	font-size: 13px;
-	font-weight: 600;
-	letter-spacing: 5px;
 	border: 0;
 	-moz-border-radius: 2px;
 	-webkit-border-radius: 2px;
 	border-radius: 2px;
 	display: inline-block;
 	text-transform: uppercase;
+	border-radius: 70px;
 }
 .conForm .submitBnt:hover {
 	background: #3d3d3d;
@@ -570,7 +575,7 @@ padding:15px 30px 15px 30px;
 }
 
 .fh5co-contact {
-  padding: 7em 0;
+  padding: 2em 0;
 }
 @media screen and (max-width: 768px) {
   .fh5co-contact {
@@ -581,27 +586,23 @@ padding:15px 30px 15px 30px;
 .contact-info {
   margin-bottom: 4em;
   padding: 0;
-  font-size: 13px !important;
-}
-
-.contact-info li {
   list-style: none;
-  margin: 30px 0 30px 0;
+  margin-bottom: 3%;
   position: relative;
   padding-left: 40px;
+  display: inline-block;
 }
 
-.contact-info li i {
+.contact-info i {
   position: absolute;
   left: 0;
   font-size: 22px;
   color: #27E1CE;
 }
 
-.contact-info li a {
+.contact-info a {
   color: #27E1CE;
 }
-
 
 /* ------- CSS DO CONTATO ------ */
 .form-group {
@@ -1379,7 +1380,7 @@ input[type="button"].btn-block {
     padding-top:50px;
     padding-bottom:50px;
     color:#fff;
-    background:#262d42;
+    background:#333333;
 }
 
 #social {
@@ -1424,6 +1425,7 @@ input[type="button"].btn-block {
 
 #gtco-products {
   background: #efefef;
+  height: 650px;
 }
 #gtco-products .testimony-slide {
   text-align: center;
@@ -1556,7 +1558,7 @@ input[type="button"].btn-block {
   margin-left: -25px;
   height: 2px;
   left: 50%;
-  background: #00B906;
+  background: #17a0f5;
 }
 .gtco-heading h2.gtco-left:before {
   left: 0;
@@ -1603,6 +1605,13 @@ input[type="button"].btn-block {
   -webkit-transition: 0.2s;
   -o-transition: 0.2s;
   transition: 0.2s;
+}
+
+.owl-nav {
+	margin-left: -3%;
+    margin-right: -3%;
+    vertical-align: middle;
+    margin-top: -20%;
 }
 
 .owl-carousel-posts .owl-controls .owl-nav .owl-next,
@@ -2025,7 +2034,7 @@ body, button{
 
 .controls{
   padding: 2%;
-  background: #333;
+  background: white;
   color: #eee;
 }
 
@@ -2130,7 +2139,7 @@ button + label{
 
 /* TESTE */
 
-/* GERAL DO TITULO */
+/* GERAL DOA TITULO */
 .titulos {
     font-size: 34px !important;
     margin-bottom: 20px !important;
@@ -2149,7 +2158,7 @@ button + label{
     margin-left: -25px !important;
     height: 2px !important;
     left: 50% !important;
-    background: #00B906 !important;
+    background: #17a0f5 !important;
 }
 
 #margem-quemsomos{
@@ -2164,11 +2173,133 @@ button + label{
 	margin-top: 7%;
 }
 
-/* FILTRO DE PACOTES  */
+
+/* ------------------------------------------------------------------------------
+	Itens da seção de Pacotes
+-------------------------------------------------------------------------------*/	
 
 .isotope-item{
-	margin-bottom:0px !important;
-	z-index: 0px !important;
+  margin-bottom:0px !important;
+  z-index: 0px !important;
+
 }
 
-/* FIM FILTRO DE PACOTES  */
+/* ------------------------------------------------------------------------------
+	Itens da seção de Galeria
+-------------------------------------------------------------------------------*/	
+
+.item img{
+  display: block;
+  max-height: 280px;
+  height: auto;
+  max-width: 100%;
+}
+
+.overlay .overlay-caption h5 {
+	font-size: 20px;
+  	font-family: 'Raleway', sans-serif;
+	color: #fff;
+	font-weight: 500;
+	letter-spacing: 0.15em;
+	margin-bottom: 0.5em;
+	text-transform: uppercase;
+}
+
+@media all and (max-width: 1200px){
+	#gtco-products {
+		margin-top: 40px;
+	}
+}
+
+@media all and (min-width: 320px) and (max-width: 385px){
+	.owl-nav {
+		margin-left: -6%;
+    	margin-right: -6%;
+    	margin-top: -55%;
+	}
+}
+
+@media all and (min-width: 386px) and (max-width: 620px){
+	.owl-nav {
+		margin-left: -6%;
+    	margin-right: -6%;
+    	margin-top: -40%;
+	}
+}
+
+
+@media all and (min-width: 621px) and (max-width: 1000px){
+	.owl-nav {
+		margin-left: -6%;
+    	margin-right: -6%;
+    	margin-top: -25%;
+	}
+}
+
+
+
+/* ------------------------------------------------------------------------------
+	Modal de Pacotes
+-------------------------------------------------------------------------------*/	
+
+#right {
+	display: inline-block;
+	float: right;
+	padding-left: 25px;
+	padding-right: 25px;
+	text-align: justify;
+}
+
+#left {
+	padding-top: 10px;
+	padding-bottom: 0px;
+	display: inline-block;
+	padding-left: 25px;
+	padding-right: 25px;
+	text-align: justify;
+	background-color: #d8d8d8c2;
+}
+
+
+@media all and (max-width: 380px){
+	.modal-content img{
+		width:100%;
+	}
+
+	.conForm input {
+		width: 90%;
+	}
+
+	.close {
+		margin-top: 0;
+	}
+
+	.left {
+		width: 100%;
+	}
+}
+
+@media all and (min-width: 381px) and (max-width: 700px){
+	.modal-content img{
+		width:100%;
+	}
+
+	.conForm input {
+		width: 90%;
+	}
+
+	#left {
+		width: 100% !important;
+	}
+}
+
+@media all and (min-width: 701px) and (max-width: 1000px){
+	#right {
+		width: 50%;
+		margin-top: -50%;
+	}
+
+	#left {
+		width:100%;
+	}
+}

@@ -52,8 +52,9 @@ class Gallery(models.Model):
 		ordering = ['title']
 
 class Email(models.Model):
+    local = models.CharField(max_length=100, default='Selecione o destino')
     nome = models.CharField(max_length=100)
     email = models.EmailField()
-
+    
     def __str__(self):
         return self.nome

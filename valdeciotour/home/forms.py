@@ -2,7 +2,7 @@ from django import forms
 from django.core.mail import send_mail
 from django.conf import settings 
 from . import views
-from .models import Email
+from .models import Email, Gallery
 
 
 class ContactValdeciotour(forms.Form):
@@ -32,15 +32,16 @@ class ContactValdeciotour(forms.Form):
 
 # Cria o formulario para recolher o e-mail do usuario
 class LeadForm(forms.Form):
+	lead_place = forms.CharField(widget=forms.Select(choices=Gallery.objects.all().values_list('id', 'title'), attrs={'style':'color: #6c7279; border-radius: 20px; padding-left: 5px; padding-right: 5px; width: 53%; margin-bottom: 10px;margin-top: 10px'}))
 	lead_name = forms.CharField(label = "Nome", max_length = 100, widget=forms.TextInput(attrs={'placeholder': 'Digite seu nome'}))
 	lead_email = forms.EmailField(label = "E-mail", widget=forms.TextInput(attrs={'placeholder': 'Nos informe um e-mail para contato'}))
 	lead_email.clean('email@example.com')
 
 	def save_contact(self):
-		email = Email(nome=self.cleaned_data['lead_name'], email=self.cleaned_data['lead_email'])
+		email = Email(nome=self.cleaned_data['lead_name'], email=self.cleaned_data['lead_email'], local=self.cleaned_data['lead_place'])
 		email.save()
 		# Envio de mensagem de boas vindas
-		message = "Olá %s,\nObrigado por se cadastrar para realizar reserva. Em breve entraremos em contato novamente.\n\nFavor não responder este email." %(email.nome)
+		message = "Olá!\nObrigado por se cadastrar para realizar reserva para %s. Em breve entraremos em contato novamente.\n\nFavor não responder este email." %(email.local)
 
 		send_mail('Confirmação de envio - Valdecio Tour', message,
 			settings.DEFAULT_FROM_EMAIL, [email.email])

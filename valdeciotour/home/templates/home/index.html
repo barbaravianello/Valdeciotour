@@ -127,9 +127,13 @@
 
         <!-- MODAIS PARA SEÇÃO DE PACOTES
         ================================================== -->
-		{% if subform.is_valid %}
+		{% if is_valid %}
 			<script type="text/javascript">
-			   alert("Solicitação de realizada com sucesso. A Valdecio Tour agradece pelo contato.");
+				var alerted = localStorage.getItem('alerted') || '';
+				if (alerted != 'yes') {
+				 alert("Mensagem enviada com sucesso! A Valdecio Tour agradece pelo contato.");
+				 localStorage.setItem('alerted','yes');
+				}
 			</script>	
 		{% endif %}
 		  
@@ -250,12 +254,6 @@
       <div class="col-md-6 col-md-push-1 col-sm-12 col-sm-push-0 col-xs-12 col-xs-push-0">
         <div class="row" style="margin-top: 15px">
 			<form role="form" method="POST">
-			  {% if form.is_valid %}
-				  <script type="text/javascript">
-					 alert("Sua mensagem foi enviada com sucesso. A Valdecio Tour agradece pelo seu contato!");
-				  </script>	
-			  {% endif %}
-			  {% csrf_token %}
 				  <fieldset>
 				  {% for field in form %}
 					{% if field.label == "Mensagem" %}
@@ -268,7 +266,7 @@
 						</div>
 					{% endif %}
 				  {% if field.errors %}
-					<label for="errors">{{ field.errors }}</label><br><br>
+					<label for="errors">{{ field.errors }}</label>
 				  {% endif %}
 				  {% endfor %}
 				  </fieldset>  

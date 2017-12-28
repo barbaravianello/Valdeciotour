@@ -2,7 +2,7 @@ from django import forms
 from django.core.mail import send_mail
 from django.conf import settings 
 from . import views
-from .models import Email, Gallery
+from .models import Email, Package
 
 
 class ContactValdeciotour(forms.Form):
@@ -32,7 +32,7 @@ class ContactValdeciotour(forms.Form):
 
 # Cria o formulario para recolher o e-mail do usuario
 class LeadForm(forms.Form):
-	lead_place = forms.CharField(widget=forms.Select(choices=Gallery.objects.all().values_list('id', 'title'), attrs={'style':'color: #6c7279; border-radius: 20px; padding-left: 5px; padding-right: 5px; width: 53%; margin-bottom: 10px;margin-top: 10px'}))
+	lead_place = forms.CharField(widget=forms.Select(choices=Package.objects.all().values_list('id', 'title'), attrs={'style':'color: #6c7279; border-radius: 20px; padding-left: 5px; padding-right: 5px; width: 53%; margin-bottom: 10px;margin-top: 10px'}))
 	lead_name = forms.CharField(label = "Nome", max_length = 100, widget=forms.TextInput(attrs={'placeholder': 'Digite seu nome'}))
 	lead_email = forms.EmailField(label = "E-mail", widget=forms.TextInput(attrs={'placeholder': 'Nos informe um e-mail para contato'}))
 	lead_email.clean('email@example.com')
@@ -41,10 +41,15 @@ class LeadForm(forms.Form):
 		email = Email(nome=self.cleaned_data['lead_name'], email=self.cleaned_data['lead_email'], local=self.cleaned_data['lead_place'])
 		email.save()
 		# Envio de mensagem de boas vindas
-		message = "Olá!\nObrigado por se cadastrar para realizar reserva para %s. Em breve entraremos em contato novamente.\n\nFavor não responder este email." %(email.local)
+		destino = Package.objects.get(id=email.local)
+		message = "Olá, %s!\nObrigado por solicitar a reserva para %s. Em breve entraremos em contato novamente.\n\nFavor não responder este email." %(email.nome, str(destino))
 
 		send_mail('Confirmação de envio - Valdecio Tour', message,
 			settings.DEFAULT_FROM_EMAIL, [email.email])
+		
+		message2 = "Olá!\n Novo lead %s, solicitou reserva para %s. E-mail para contato: %s." %(email.nome, str(destino), email.email)
+		
+		send_mail('Reserva do site Valdécio Tour', message2, settings.DEFAULT_FROM_EMAIL, [settings.CONTACT_EMAIL])
 
 	def __str__(self):
 		return self.lead_name

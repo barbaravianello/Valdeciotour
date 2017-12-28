@@ -129,11 +129,7 @@
         ================================================== -->
 		{% if is_valid %}
 			<script type="text/javascript">
-				var alerted = localStorage.getItem('alerted') || '';
-				if (alerted != 'yes') {
-				 alert("Mensagem enviada com sucesso! A Valdecio Tour agradece pelo contato.");
-				 localStorage.setItem('alerted','yes');
-				}
+				alert("Mensagem enviada com sucesso! A Valdecio Tour agradece pelo contato.");
 			</script>	
 		{% endif %}
 		  

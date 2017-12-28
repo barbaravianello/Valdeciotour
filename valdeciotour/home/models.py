@@ -50,3 +50,10 @@ class Gallery(models.Model):
 		verbose_name = 'Galeria'
 		verbose_name_plural = 'Galerias'
 		ordering = ['title']
+
+class Email(models.Model):
+    nome = models.CharField(max_length=100)
+    email = models.EmailField()
+
+    def __str__(self):
+        return self.nome

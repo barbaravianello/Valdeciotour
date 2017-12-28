@@ -2,6 +2,7 @@ from django import forms
 from django.core.mail import send_mail
 from django.conf import settings 
 from . import views
+from .models import Email
 
 
 class ContactValdeciotour(forms.Form):
@@ -27,3 +28,22 @@ class ContactValdeciotour(forms.Form):
 		message = message % context
 		
 		send_mail('Contato do site Valdécio Tour', message, settings.DEFAULT_FROM_EMAIL, [settings.CONTACT_EMAIL])
+
+
+# Cria o formulario para recolher o e-mail do usuario
+class LeadForm(forms.Form):
+	lead_name = forms.CharField(label = "Nome", max_length = 100, widget=forms.TextInput(attrs={'placeholder': 'Digite seu nome'}))
+	lead_email = forms.EmailField(label = "E-mail", widget=forms.TextInput(attrs={'placeholder': 'Nos informe um e-mail para contato'}))
+	lead_email.clean('email@example.com')
+
+	def save_contact(self):
+		email = Email(nome=self.cleaned_data['lead_name'], email=self.cleaned_data['lead_email'])
+		email.save()
+		# Envio de mensagem de boas vindas
+		message = "Olá %s,\nObrigado por se cadastrar para realizar reserva. Em breve entraremos em contato novamente.\n\nFavor não responder este email." %(email.nome)
+
+		send_mail('Confirmação de envio - Valdecio Tour', message,
+			settings.DEFAULT_FROM_EMAIL, [email.email])
+
+	def __str__(self):
+		return self.lead_name

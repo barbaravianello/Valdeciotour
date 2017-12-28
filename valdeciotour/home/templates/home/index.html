@@ -127,6 +127,13 @@
 
         <!-- MODAIS PARA SEÇÃO DE PACOTES
         ================================================== -->
+		{% if subform.is_valid %}
+			<script type="text/javascript">
+			   alert("Solicitação de realizada com sucesso. A Valdecio Tour agradece pelo contato.");
+			</script>	
+		{% endif %}
+		  
+		  
         {% for package in packages %}
         <!-- MODAL 1 -->
         <div class="modal fade" id="modal{{ package.slug }}" role="dialog" style="margin:auto">
@@ -148,12 +155,13 @@
               </div>
               <div class="col-md-12" id="left">
                 <h4 align="center" style="padding-top: -5px">QUE TAL FAZER SUA RESERVA?</h4>
-                <form class="conForm col-md-12">
-                <input type="text" name="name" placeholder="Digite seu nome">
+                <form class="conForm col-md-12" method="POST">
+				{% csrf_token %}
+				{% for field in subform %}
+                	{{ field }}
                 <br>
-                <input type="text" name="email" placeholder="Nos informe um e-mail para contato">
-                <br>
-                <button class="submitBnt" data-dismiss="modal">Desejo viajar para {{ package.title }}</button>
+				{% endfor %}
+                <button class="submitBnt" type="submit">Desejo viajar para {{ package.title }}</button>
                 <br>
                 <br>
                 </form>
@@ -242,7 +250,7 @@
       <div class="col-md-6 col-md-push-1 col-sm-12 col-sm-push-0 col-xs-12 col-xs-push-0">
         <div class="row" style="margin-top: 15px">
 			<form role="form" method="POST">
-			  {% if is_valid %}
+			  {% if form.is_valid %}
 				  <script type="text/javascript">
 					 alert("Sua mensagem foi enviada com sucesso. A Valdecio Tour agradece pelo seu contato!");
 				  </script>	

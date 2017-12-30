@@ -159,7 +159,7 @@
 				{% csrf_token %}
 				{% for field in subform %}
                 	{{ field }}
-                <br>
+                	<br>
 				{% endfor %}
                 <button class="submitBnt" type="submit">Desejo viajar para {{ package.title }}</button>
                 <br>
@@ -282,7 +282,50 @@
   </div>  
 </div>
 <!-- FIM DA SEÇÃO CONTATO -->
+	
+<div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false" style="margin-left:30%"></div>
+<br>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '184883485578013',
+      xfbml      : true,
+      version    : 'v2.11'
+    });
+    FB.AppEvents.logPageView();
+  };
 
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+	
+	
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.11&appId=184883485578013';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+	
+	<script>
+// Only works after `FB.init` is called
+function myFacebookLogin() {
+FB.login(function(){
+  // Note: The call will only work if you accept the permission request
+  FB.api('/me/feed', 'post', {message: 'Hello, world!'});
+}, {scope: 'publish_actions'});}
+</script><!--
+<button onclick="myFacebookLogin()">Login with Facebook</button>-->
+
+<div class="fb-comments" data-href="{{ request.build_absolute_uri }}" data-numposts="5"></div>
 
 
 {% endblock %}

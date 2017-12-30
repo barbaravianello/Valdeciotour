@@ -14,6 +14,12 @@
 @import url(https://fonts.googleapis.com/css?family=Merriweather:300,400,500,600,700);
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 
+@font-face {
+	font-family: 'Millenia';
+	src: url('millenia.ttf');
+}
+
+
 p {
 	font-size: 13px;
 	line-height: 22.4px;
@@ -322,10 +328,8 @@ ul li {
 }
 .banner-text h1 {
 	color: #fff;
-	font-family: "Open Sans", Arial, sans-serif;
-	font-size: 65px;
-	font-weight: 700;
-	text-transform: uppercase;
+	font-family: 'Millenia', Arial, sans-serif;
+	font-size: 80px;
 }
 .banner-text p {
 	color: rgba(255, 255, 255, 0.60);

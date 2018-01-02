@@ -6,9 +6,6 @@ from django.conf.urls.static import static
 
 urlpatterns = [
 	url(r'^$', views.index, name = 'index'),
-	url(r'^login/$', auth_views.login, name='login'),
-    url(r'^logout/$', auth_views.logout, name='logout'),
-	url(r'^oauth/', include('social_django.urls', namespace='social')),
 ]
 
 if settings.DEBUG:

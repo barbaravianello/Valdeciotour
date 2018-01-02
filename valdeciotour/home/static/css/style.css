@@ -47,16 +47,16 @@ body, html{
 	/* truque para mudar os botões do filtro quando eles forem acionados*/
 	/*border-radius: 5px 10px 15px 20px;/*formato v*/
 	/*border-radius: 10px/30px;*//*quadrado abrindo*/
-	background-color: rgba(0, 174, 218, 0.9);
+	background-color: #17a0f5;
 	border-color: #fff;
-	color: black;
+	color: #ffffff;
 }
 .nav-pills > li > a {
 	/*truque para mudar todos os botões do filtro*/
 	border-radius: 5px 20px 5px;*/
 	/*border-radius: 30px/10px;/*quadrado fechando*/
 	padding: 8px 20px;
-	border: 2px solid rgba(0, 174, 218, 0.9);
+	border: 2px solid #17a0f5;
 	color: black;
 	font-size: 14px;
 	font-weight: 600;
@@ -1162,13 +1162,13 @@ a[href="#top"]:hover{
 }
 
 #volta-ao-topo{
-	color: #fa0a0c;
+	color: #17a0f5;
     border-radius: 50%;
 }
 
 #volta-ao-topo:hover{
-	color: #fff;
-	background-color: #fa0a0c;
+	color: #ffffff;
+	background-color: #17a0f5;
     border-radius: 50%;
 }
 

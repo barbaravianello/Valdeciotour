@@ -8,7 +8,7 @@
   <div class="container">
     <div class="col-md-10 col-md-offset-1">
       <div class="banner-text text-center">
-      <h1>VALDECIO TOUR</h1>
+      <h1>Valdecio Tour</h1>
       <p>Lorem ipsum dolor sit ametcursus magna vel scelerisque Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna vel scelerisque nisl consectetur et.nisl consectetur et.</p>
       <a href="#fh5co-why-us" class="btn btn-large">SAIBA MAIS</a> </div>
       <!-- banner text --> 
@@ -48,7 +48,7 @@
   <!-- SEÇÃO POR QUE CONTRATAR A VALDECIO TOUR 
   ================================================== -->
 
-  <div class="container" style="background-image: url({% static 'images/banner.jpg' %}) ;width: 100%;">
+  <div class="container"  style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5) ), url(../../static/images/banner.jpg);width: 100%; background-repeat: no-repeat; -moz-background-size: cover; -o-background-size: cover; -webkit-background-size: cover; background-size: cover;">
     <br>
     <br>
    <h3 class="titulos" id="margem-pq" style="text-align: center;color:white !important; margin-top:1%;">POR QUE CONTRATAR A VALDECIO TOUR?</h3> 
@@ -161,7 +161,7 @@
                 	{{ field }}
                 	<br>
 				{% endfor %}
-                <button class="submitBnt" type="submit">Desejo viajar para {{ package.title }}</button>
+                <button class="submitBnt" type="submit">Desejo viajar agora</button>
                 <br>
                 <br>
                 </form>
@@ -191,19 +191,18 @@
       </div>
     </div>
     <div class="row">
-      <div class="owl-carousel owl-carousel-carousel " style="    width: 80%;
-  margin-left: 10%;">
+      <div class="owl-carousel owl-carousel-carousel " style="width: 80%; margin-left: 10%;">
        {% for item in gallery %}
         <div class="item">
           <div class="work isotope-item"> 
             <a href="" class="work-box"> 
-              <img src={{ item.image.url }} alt="" style="max-height: 280px">
+              <img src={{ item.image.url }} alt="" style="height: 280px">
               <!-- overlay -->
               <div class="overlay">
                 <div class="overlay-caption">
                   <h5>{{ item.title }} </h5>
                   <div class="conForm">
-					  <a href="{% url 'social:begin' 'facebook' %}"><button class="submitBnt" width=20>Veja mais</button></a>
+					  <button class="submitBnt" width=20>Veja mais</button>
                   </div>
                 </div>
               </div>
@@ -283,49 +282,11 @@
 </div>
 <!-- FIM DA SEÇÃO CONTATO -->
 	
-<div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false" style="margin-left:30%"></div>
+<div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false" style="margin-left:40%"></div>
 <br>
-<script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '184883485578013',
-      xfbml      : true,
-      version    : 'v2.11'
-    });
-    FB.AppEvents.logPageView();
-  };
-
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "https://connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
-</script>
-	
-	
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = 'https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.11&appId=184883485578013';
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
-	
-	<script>
-// Only works after `FB.init` is called
-function myFacebookLogin() {
-FB.login(function(){
-  // Note: The call will only work if you accept the permission request
-  FB.api('/me/feed', 'post', {message: 'Hello, world!'});
-}, {scope: 'publish_actions'});}
-</script><!--
-<button onclick="myFacebookLogin()">Login with Facebook</button>-->
-
-<div class="fb-comments" data-href="{{ request.build_absolute_uri }}" data-numposts="5"></div>
-
+<br>
+<div class="fb-comments" data-href="https://barbaravianello.github.io/Valdeciotour" data-numposts="5" style="margin-left: 30%"></div>
+<br>
+<br>
 
 {% endblock %}

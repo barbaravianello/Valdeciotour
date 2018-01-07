@@ -2382,3 +2382,16 @@ button + label{
       .button__bg {
   -webkit-filter: none !important;
   filter: none !important; }
+
+.animate-box {
+	background-color: #ffffff;
+}
+
+
+#packs {
+	background-color: #ffffff;
+}
+
+#works {
+	background-color: #ffffff;
+}

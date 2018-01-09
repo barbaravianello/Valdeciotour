@@ -1,20 +1,7 @@
-ISSUE #01 (Frontend): >>>>>>> SEÇÃO INICIAL <<<<<<<<<
+## ISSUES (Frontend): :warning: Seção Galeria :warning:
 
-- Mudar a fonte;
-
-
-ISSUE #02 (Frontend): >>>>>>> SEÇÃO POR QUE CONTRATAR VT <<<<<<<<<
-
-- Escolher os ícones;
+- [x] Linkar modal em galeria;
+- [x] Adicionar carousel no modal;
+- [ ] Formatar o CSS do modal;
 
 
-ISSUE #03 (Frontend): >>>>>>> SEÇÃO GALERIA/AVALIAÇÕES <<<<<<<<<
-
-- Redirecionar o usuário para outra página ao clicar no CTA de galeria; 
-- Exibir álbuns de fotos organizados por (?);
-- Elaborar todo o layout da página de Avaliações;
-
-
-ISSUE #01 (Backend): >>>>>>> SEÇÃO AVALIAÇÕES <<<<<<<<<
-- Possibilitar o login com a conta do Facebook;
-- Permitir que o usuário possa avaliar as fotos.

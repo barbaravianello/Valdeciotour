@@ -18,6 +18,13 @@
   <link rel="stylesheet" href="css/animate.min.css">
   <link rel="stylesheet" href="css/icomoon.css">
 
+
+  <!-- CSS DO CAROUSEL DO MODAL DA GALERIA -->
+  <link rel="stylesheet" type="text/css" href="css/demo.css" />
+  <link rel="stylesheet" type="text/css" href="css/style2.css" />
+  <link rel="stylesheet" type="text/css" href="css/elastislide.css" />
+  <link rel="stylesheet" type="text/css" href="css/reset.css" />
+
   <!-- Principais arquivos CSS
   ================================================== -->
 
@@ -27,6 +34,37 @@
   <!-- ============================================= -->
   
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+
+
+  <!-- TESTE CAROUSEL -->
+
+  <noscript>
+    <style>
+      .es-carousel ul{
+        display:block;
+      }
+    </style>
+  </noscript>
+  <script id="img-wrapper-tmpl" type="text/x-jquery-tmpl">  
+    <div class="rg-image-wrapper">
+      {{if itemsCount > 1}}
+        <div class="rg-image-nav">
+          <a href="#" class="rg-image-nav-prev">Previous Image</a>
+          <a href="#" class="rg-image-nav-next">Next Image</a>
+        </div>
+      {{/if}}
+      <div class="rg-image"></div>
+      <div class="rg-loading"></div>
+      <div class="rg-caption-wrapper">
+        <div class="rg-caption" style="display:none;">
+          <p></p>
+        </div>
+      </div>
+    </div>
+  </script>
+
+
 
   </head>
 
@@ -38,27 +76,27 @@
   <section class="banner" role="banner">
 
     <header id="header">
-      <div class="header-content clearfix"> 
-        <img src="images/solemar.png" class="logo" href="index.html" style="height: 100%; margin: 05px; width: 13%; padding-top: 0%;" >
-        <nav class="navigation" role="navigation">
-        <ul class="primary-nav" style="padding-top: 40px;">
-          <li><a href="#fh5co-why-us">Quem somos</a></li>
-          <li><a href="#works">Pacotes</a></li>
-          <li><a href="#gtco-products">Galeria</a></li>
-          <li><a href="#gtco-products">Avaliações</a></li>
-          <li><a href=".fh5co-contact">Contato</a></li>
-        </ul>
-        </nav>
-        <a href="#" class="nav-toggle">Menu<span></span></a> 
-      </div>
+    <div class="header-content clearfix"> 
+      <img src="images/solemar.png" class="logo" href="index.html" style="height: 100%; margin: 05px; width: 13%; padding-top: 0%;" >
+      <nav class="navigation" role="navigation">
+      <ul class="primary-nav" style="padding-top: 40px;">
+        <li><a href="#fh5co-why-us">Quem somos</a></li>
+        <li><a href="#works">Pacotes</a></li>
+        <li><a href="#gtco-products">Galeria</a></li>
+        <!--li><a href="#gtco-products">Avaliações</a></li-->
+        <li><a href=".fh5co-contact">Contato</a></li>
+      </ul>
+      </nav>
+      <a href="#" class="nav-toggle">Menu<span></span></a> </div>
     </header>
 
     <!-- banner text -->
     <div class="container">
     <div class="col-md-10 col-md-offset-1">
       <div class="banner-text text-center">
-      <h1>VALDECIO TOUR</h1>
+      <h1>Valdecio Tour</h1>
       <p>Lorem ipsum dolor sit ametcursus magna vel scelerisque Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna vel scelerisque nisl consectetur et.nisl consectetur et.</p>
+    
       <a href="#fh5co-why-us" class="btn btn-large">SAIBA MAIS</a> </div>
       <!-- banner text --> 
     </div>
@@ -97,7 +135,8 @@
     <!-- SEÇÃO POR QUE CONTRATAR A VALDECIO TOUR 
     ================================================== -->
 
-    <div class="container" style="background-image: url(images/banner.jpg) ;width: 100%;">
+    <div class="container"  style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5) ), url(images/banner.jpg) ;width: 100%; background-repeat: no-repeat; -moz-background-size: cover;
+  -o-background-size: cover; -webkit-background-size: cover; background-size: cover;">
       <br>
       <br>
      <h3 class="titulos" id="margem-pq" style="text-align: center;color:white !important; margin-top:1%;">POR QUE CONTRATAR A VALDECIO TOUR?</h3> 
@@ -174,7 +213,7 @@
         <!-- ITEM 2 -->
         <div class="col-lg-3 col-md-6 col-sm-6 work isotope-item ida"> 
         <a href="" class="work-box" data-toggle="modal" data-target="#modal2"> 
-          <img src="images/2.jpg" alt="" style="height: 300px">
+          <img src="images/17.jpg" alt="" style="height: 300px">
           <!-- overlay -->
           <div class="overlay">
           <div class="overlay-caption">
@@ -307,13 +346,14 @@
                 <p><span style="font-weight:700;">Preço:</span> R$ 876,98</p>
               </div>
               <div class="col-md-12" id="left">
+                <br>
                 <h4 align="center" style="padding-top: -5px">QUE TAL FAZER SUA RESERVA?</h4>
                 <form class="conForm col-md-12">
                 <input type="text" name="name" placeholder="Digite seu nome">
                 <br>
                 <input type="text" name="email" placeholder="Nos informe um e-mail para contato">
                 <br>
-                <button class="submitBnt" data-dismiss="modal">Desejo viajar para Pipa</button>
+                <button class="submitBnt" data-dismiss="modal">Desejo viajar agora</button>
                 <br>
                 <br>
                 </form>
@@ -342,13 +382,14 @@
                 <p><span style="font-weight:700;">Preço:</span> R$ 200,98</p>
               </div>
               <div class="col-md-12" id="left">
+                <br>
                 <h4 align="center" style="padding-top: -5px">QUE TAL FAZER SUA RESERVA?</h4>
                 <form class="conForm col-md-12">
                 <input type="text" name="name" placeholder="Digite seu nome">
                 <br>
                 <input type="text" name="email" placeholder="Nos informe um e-mail para contato">
                 <br>
-                <button class="submitBnt" data-dismiss="modal">Desejo viajar para Ponta Negra</button>
+                <button class="submitBnt" data-dismiss="modal">Desejo viajar agora</button>
                 <br>
                 <br>
                 </form>
@@ -378,13 +419,14 @@
                 <p><span style="font-weight:700;">Preço:</span> R$ 200,98</p>
               </div>
               <div class="col-md-12" id="left">
+                <br>
                 <h4 align="center" style="padding-top: -5px">QUE TAL FAZER SUA RESERVA?</h4>
                 <form class="conForm col-md-12">
                 <input type="text" name="name" placeholder="Digite seu nome">
                 <br>
                 <input type="text" name="email" placeholder="Nos informe um e-mail para contato">
                 <br>
-                <button class="submitBnt" data-dismiss="modal">Desejo viajar para Ponta Negra</button>
+                <button class="submitBnt" data-dismiss="modal">Desejo viajar agora</button>
                 <br>
                 <br>
                 </form>
@@ -413,13 +455,14 @@
                 <p><span style="font-weight:700;">Preço:</span> R$ 200,98</p>
               </div>
               <div class="col-md-12" id="left">
+                <br>
                 <h4 align="center" style="padding-top: -5px">QUE TAL FAZER SUA RESERVA?</h4>
                 <form class="conForm col-md-12">
                 <input type="text" name="name" placeholder="Digite seu nome">
                 <br>
                 <input type="text" name="email" placeholder="Nos informe um e-mail para contato">
                 <br>
-                <button class="submitBnt" data-dismiss="modal">Desejo viajar para Ponta Negra</button>
+                <button class="submitBnt" data-dismiss="modal">Desejo viajar agora</button>
                 <br>
                 <br>
                 </form>
@@ -449,13 +492,14 @@
                 <p><span style="font-weight:700;">Preço:</span> R$ 876,98</p>
               </div>
               <div class="col-md-12" id="left">
+                <br>
                 <h4 align="center" style="padding-top: -5px">QUE TAL FAZER SUA RESERVA?</h4>
                 <form class="conForm col-md-12">
                   <input type="text" name="name" placeholder="Meu nome é">
                   <br>
                   <input type="text" name="email" placeholder="Meu e-mail para contato">
                   <br>
-                  <button class="submitBnt" data-dismiss="modal">Desejo viajar para Pipa</button>
+                  <button class="submitBnt" data-dismiss="modal">Desejo viajar agora</button>
                   <br>
                   <br>
                 </form>
@@ -484,13 +528,14 @@
                 <p><span style="font-weight:700;">Preço:</span> R$ 200,98</p>
               </div>
               <div class="col-md-12" id="left">
+                <br>
                 <h4 align="center" style="padding-top: -5px">QUE TAL FAZER SUA RESERVA?</h4>
                 <form class="conForm col-md-12">
                   <input type="text" name="name" placeholder="Meu nome é">
                   <br>
                   <input type="text" name="email" placeholder="Meu e-mail para contato">
                   <br>
-                  <button class="submitBnt" data-dismiss="modal">Desejo viajar para Ponta Negra</button>
+                  <button class="submitBnt" data-dismiss="modal">Desejo viajar agora</button>
                   <br>
                   <br>
                 </form>
@@ -520,13 +565,14 @@
                 <p><span style="font-weight:700;">Preço:</span> R$ 200,98</p>
               </div>
               <div class="col-md-12" id="left">
+                <br>
                 <h4 align="center" style="padding-top: -5px">QUE TAL FAZER SUA RESERVA?</h4>
                 <form class="conForm col-md-12">
                   <input type="text" name="name" placeholder="Meu nome é">
                   <br>
                   <input type="text" name="email" placeholder="Meu e-mail para contato">
                   <br>
-                  <button class="submitBnt" data-dismiss="modal">Desejo viajar para Aquário</button>
+                  <button class="submitBnt" data-dismiss="modal">Desejo viajar agora</button>
                   <br>
                   <br>
                 </form>
@@ -556,13 +602,14 @@
                 <p><span style="font-weight:700;">Preço:</span> R$ 200,98</p>
               </div>
               <div class="col-md-12" id="left">
+                <br>
                 <h4 align="center" style="padding-top: -5px">QUE TAL FAZER SUA RESERVA?</h4>
                 <form class="conForm col-md-12">
                   <input type="text" name="name" placeholder="Meu nome é">
                   <br>
                   <input type="text" name="email" placeholder="Meu e-mail para contato">
                   <br>
-                  <button class="submitBnt" data-dismiss="modal">Desejo viajar para Museu X</button>
+                  <button class="submitBnt" data-dismiss="modal">Desejo viajar agoraX</button>
                   <br>
                   <br>
                 </form>
@@ -590,12 +637,12 @@
         </div>
       </div>
       <div class="row">
-        <div class="owl-carousel owl-carousel-carousel " style="    width: 80%;
-    margin-left: 10%;">
+        <div class="owl-carousel owl-carousel-carousel " style="    width: 90%;
+    margin-left: 5%;">
           <div class="item">
             <div class="work isotope-item ida"> 
-              <a href="" class="work-box"> 
-                <img src="images/g1.jpeg" alt="" style="height: 300px">
+              <a href="" class="work-box" data-toggle="modal" data-target="#modal-galeria-1"> 
+                <img src="images/g1.jpeg" alt="" style="height: 280px">
                 <!-- overlay -->
                 <div class="overlay">
                   <div class="overlay-caption">
@@ -611,8 +658,8 @@
           </div>
           <div class="item">
             <div class=" work isotope-item ida"> 
-              <a href="" class="work-box"> 
-                <img src="images/g2.jpeg" alt="" style="height: 300px">
+              <a href="" class="work-box" data-toggle="modal" data-target="#modal-galeria-1"> 
+                <img src="images/g2.jpeg" alt="" style="height: 280px">
                 <!-- overlay -->
                 <div class="overlay">
                   <div class="overlay-caption">
@@ -628,8 +675,8 @@
           </div>
           <div class="item">
             <div class=" work isotope-item ida"> 
-              <a href="" class="work-box"> 
-                <img src="images/g3.jpeg" alt="" style="height: 300px">
+              <a href="" class="work-box" data-toggle="modal" data-target="#modal-galeria-1"> 
+                <img src="images/g3.jpeg" alt="" style="height: 280px">
                 <!-- overlay -->
                 <div class="overlay">
                   <div class="overlay-caption">
@@ -645,8 +692,8 @@
           </div>
           <div class="item">
             <div class=" work isotope-item ida"> 
-              <a href="" class="work-box"> 
-                <img src="images/g4.jpeg" alt="" style="height: 300px">
+              <a href="" class="work-box" data-toggle="modal" data-target="#modal-galeria-1"> 
+                <img src="images/g4.jpeg" alt="" style="height: 280px">
                 <!-- overlay -->
                 <div class="overlay">
                   <div class="overlay-caption">
@@ -662,8 +709,8 @@
           </div>
           <div class="item">
             <div class=" work isotope-item ida"> 
-              <a href="" class="work-box"> 
-                <img src="images/g5.jpeg" alt="" style="height: 300px">
+              <a href="" class="work-box" data-toggle="modal" data-target="#modal-galeria-1"> 
+                <img src="images/g5.jpeg" alt="" style="height: 280px">
                 <!-- overlay -->
                 <div class="overlay">
                   <div class="overlay-caption">
@@ -679,8 +726,8 @@
           </div>
           <div class="item">
             <div class=" work isotope-item ida"> 
-              <a href="" class="work-box"> 
-                <img src="images/g6.jpeg" alt="" style="height: 300px">
+              <a href="" class="work-box" data-toggle="modal" data-target="#modal-galeria-1"> 
+                <img src="images/g6.jpeg" alt="" style="height: 280px">
                 <!-- overlay -->
                 <div class="overlay">
                   <div class="overlay-caption">
@@ -696,8 +743,8 @@
           </div>
           <div class="item">
             <div class=" work isotope-item ida"> 
-              <a href="" class="work-box"> 
-                <img src="images/g7.jpeg" alt="" style="height: 300px">
+              <a href="" class="work-box" data-toggle="modal" data-target="#modal-galeria-1"> 
+                <img src="images/g7.jpeg" alt="" style="height: 280px">
                 <!-- overlay -->
                 <div class="overlay">
                   <div class="overlay-caption">
@@ -718,65 +765,125 @@
   <!-- FIM DA SEÇÃO GALERIA -->
 
 
-      <!-- SEÇÃO CONTATO
-    ================================================== -->
 
-    <div class="fh5co-contact animate-box">
-      <div class="container">
-        <div class="row">
-          <h3 class="titulos" style="text-align: center;">CONTATO</h3>            
-            <div class="contact-info col-md-6" id="contact-number">
-              <i class="icon-phone" id="contact-phone"></i><p>+ 1235 2355 98</p>
-            </div>
-            <div class="contact-info col-md-6">
-              <i class="icon-envelope" id="contact-email"></i><a href="#"><p style="color:#6c7279">info@yoursite.com</p></a>
-            </div>
+  <!-- MODAIS PARA SEÇÃO GALERIA
+  ================================================== -->
+
+  <!-- MODAL 1 -->
+  <div class="modal fade" id="modal-galeria-1" role="dialog" style="margin:auto">
+    <div class="modal-dialog modal-md" style="width: 50%; height:50%;" id="modal-md">
+      <div class="modal-content" style="height: auto; min-height: 50%;">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" style="padding-top: 3%; padding-right: 5%;">&times;</button>
+          <br>
+          <h4 align="center" style="margin-top: 5%; margin-bottom: 5%">PIRANGI</h4>
         </div>
-        <div class="row">
-          <!--
-          <div class="col-md-3">
-            <h3>Contato</h3>
-            <ul class="contact-info">
-              <li><i class="icon-map"></i><p>198 West 21th Street, Suite 721 New York NY 10016</p></li>
-              <li><i class="icon-phone"></i><p>+ 1235 2355 98</p></li>
-              <li><i class="icon-envelope"></i><a href="#"><p style="color:#27E1CE">info@yoursite.com</p></a></li>
-              <li><i class="icon-globe"></i><a href="#"><p style="color:#27E1CE">www.yoursite.com</p></a></li>
-            </ul>
-          </div>
-          -->
-
-          <div class="col-md-6 col-md-push-1 col-sm-12 col-sm-push-0 col-xs-12 col-xs-push-0">
-            <div class="row" style="margin-top: 15px">
-              <div class="col-md-6">
-                <div class="form-group">
-                  <input class="form-control" placeholder="Nome" type="text">
+        <div class="modal-body" style="margin">
+          <div id="rg-gallery" class="rg-gallery" style="padding: 5% 5% 20%;" >
+            <div class="rg-thumbs">
+            <!-- Elastislide Carousel Thumbnail Viewer -->
+              <div class="es-carousel-wrapper">
+                <div class="es-nav">
+                  <span class="es-nav-prev">Previous</span>
+                  <span class="es-nav-next">Next</span>
+                </div>
+                <div class="es-carousel">
+                  <ul>
+                    <li>
+                      <a href="#">
+                        <img src="images_carousel/thumbs/1.jpg" data-large="images_carousel/1.jpg" alt="image01" data-description="Some description" />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <img src="images_carousel/thumbs/3.jpg" data-large="images_carousel/2.jpg" alt="image02" data-description="Some description" />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <img src="images_carousel/thumbs/2.jpg" data-large="images_carousel/3.jpg" alt="image03" data-description="Some description" />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <img src="images_carousel/thumbs/4.jpg" data-large="images_carousel/4.jpg" alt="image04" data-description="Some description" />
+                      </a>
+                    </li>
+                    <li>...</li>
+                  </ul>
                 </div>
               </div>
-              <div class="col-md-6">
-                <div class="form-group">
-                  <input class="form-control" placeholder="Email" type="text">
-                </div>
-              </div>
-              <div class="col-md-12">
-                <div class="form-group">
-                  <textarea name="" class="form-control" id="" cols="30" rows="7" placeholder="Mensagem"></textarea>
-                </div>
-              </div>
-              <div class="col-md-12">
-                <div class="form-group">
-                  <input value="Enviar mensagem" class="btn btn-primary" type="submit">
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6" id="mapa">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d496.1811094157565!2d-35.196915396494944!3d-5.792094122012815!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7b3001b81b9dbed%3A0x6f3cb33019dc1df4!2sEscola+Dom%C3%A9stica+de+Natal!5e0!3m2!1spt-BR!2sbr!4v1513910921914" width="320" height="280" frameborder="0" style="border:0;width:96%" allowfullscreen></iframe>
-          </div>
+            <!-- End Elastislide Carousel Thumbnail Viewer -->
+            </div><!-- rg-thumbs -->
+          </div><!-- rg-gallery -->
         </div>
-      </div>  
+      </div>
     </div>
-    <!-- FIM DA SEÇÃO CONTATO -->
+  </div>
+  <!-- FIM DO MODAL 1 -->
+
+
+
+
+    <!-- SEÇÃO CONTATO
+  ================================================== -->
+
+  <div class="fh5co-contact animate-box">
+    <div class="container">
+      <div class="row">
+        <h3 class="titulos" style="text-align: center;">CONTATO</h3>            
+          <div class="contact-info col-md-6" id="contact-number">
+            <i class="icon-phone" id="contact-phone"></i><p>+ 1235 2355 98</p>
+          </div>
+          <div class="contact-info col-md-6">
+            <i class="icon-envelope" id="contact-email"></i><a href="#"><p style="color:#6c7279">info@yoursite.com</p></a>
+          </div>
+      </div>
+      <div class="row">
+        <!--
+        <div class="col-md-3">
+          <h3>Contato</h3>
+          <ul class="contact-info">
+            <li><i class="icon-map"></i><p>198 West 21th Street, Suite 721 New York NY 10016</p></li>
+            <li><i class="icon-phone"></i><p>+ 1235 2355 98</p></li>
+            <li><i class="icon-envelope"></i><a href="#"><p style="color:#27E1CE">info@yoursite.com</p></a></li>
+            <li><i class="icon-globe"></i><a href="#"><p style="color:#27E1CE">www.yoursite.com</p></a></li>
+          </ul>
+        </div>
+        -->
+
+        <div class="col-md-6 col-md-push-1 col-sm-12 col-sm-push-0 col-xs-12 col-xs-push-0">
+          <div class="row" style="margin-top: 15px">
+            <div class="col-md-6">
+              <div class="form-group">
+                <input class="form-control" placeholder="Nome" type="text">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <input class="form-control" placeholder="Email" type="text">
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="form-group">
+                <textarea name="" class="form-control" id="" cols="30" rows="7" placeholder="Mensagem"></textarea>
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="form-group">
+                <input value="Enviar mensagem" class="btn btn-primary" type="submit">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6" id="mapa">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7939.52685686511!2d-35.26188250959851!3d-5.747160378203626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7b3abca5b705865%3A0x8268c91941fb670c!2sR.+da+Conquista%2C+11+-+Nossa+Sra.+da+Apresenta%C3%A7%C3%A3o%2C+Natal+-+RN%2C+59115-455!5e0!3m2!1spt-BR!2sbr!4v1515118004599" width="320" height="280" frameborder="0" style="border:0;width:96%" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>  
+  </div>
+  <!-- FIM DA SEÇÃO CONTATO -->
 
 
   <!-- FOOTER 
@@ -812,7 +919,6 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
   <script src="js/bootstrap.min.js"></script> 
   <script src="js/jquery.flexslider-min.js"></script> 
-  <script src="js/modernizr.js"></script> 
   <script src="js/main.js"></script> 
   <script src="js/owl.autoplay.js"></script> 
   <script src="js/jquery.isotope.js"></script>
@@ -951,6 +1057,13 @@ var owlCarouselTimeout = 50;
 
 
   </script>
+
+
+    <!-- JS DO CAROUSEL DO MODAL DA GALERIA -->
+    <script type="text/javascript" src="js/jquery.tmpl.min.js"></script>
+    <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="js/jquery.elastislide.js"></script>
+    <script type="text/javascript" src="js/gallery.js"></script>
 
 
   </body>

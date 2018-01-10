@@ -1,11 +1,12 @@
 from django.db import models
 from django.utils import timezone
 from ckeditor.fields import RichTextField
+from django.db.models import Q
 
 class Package(models.Model):
 	title = models.CharField('Nome', max_length=100)
 	slug = models.SlugField('Atalho')
-	description = RichTextField('Descrição')
+	description = RichTextField('Descrição', max_length=248)
 	price = models.DecimalField('Preço', max_digits=7, decimal_places=2)
 	travel_date = models.DateField('Data da Partida', null=True, blank=True)
 	arrival_date = models.DateField('Data da Chegada', null=True, blank=True)
@@ -58,3 +59,21 @@ class Email(models.Model):
     
     def __str__(self):
         return self.nome
+      
+      
+class GalleryManager(models.Manager):
+    def search(self, query):
+        return self.get_queryset().filter(Q(name__icontains=query)) | Q(description__contains=query)
+
+class GalleryImage(models.Model):
+	gallery_choices = Gallery.objects.all().values_list('title')
+	CHOICES = ()
+	for i in gallery_choices:
+		CHOICES += (
+			('title', i),
+		)
+      
+	album = models.ForeignKey(Gallery, related_name='gallery', blank=True)
+	id_image = models.CharField(max_length=100, verbose_name="Álbum", choices=CHOICES)
+	image = models.ImageField(upload_to='gallery/images', verbose_name="Imagem")
+

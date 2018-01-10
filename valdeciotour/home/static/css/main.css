@@ -2250,6 +2250,15 @@ button + label{
 /* ------------------------------------------------------------------------------
 	Modal de Pacotes
 -------------------------------------------------------------------------------*/	
+@media all and (max-width: 726px){
+	.modal {
+		margin-left: 5% !important;
+	}
+
+	.modal-dialog {
+		width: 90% !important;
+	}
+}
 
 #right {
 	display: inline-block;
@@ -2269,6 +2278,20 @@ button + label{
 	background-color: #d8d8d8c2;
 }
 
+.modal-header {
+	background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5) ), url(../images/15.jpeg);
+	width: 100%; 
+	background-repeat: no-repeat; 
+	-moz-background-size: cover;
+  	-o-background-size: cover; 
+  	-webkit-background-size: cover; 
+  	background-size: cover
+}
+
+
+.modal-body {
+	background-color: #b3b3b35e;
+}
 
 @media all and (max-width: 380px){
 	.modal-content img{
@@ -2382,3 +2405,16 @@ button + label{
       .button__bg {
   -webkit-filter: none !important;
   filter: none !important; }
+
+.animate-box {
+	background-color: #ffffff;
+}
+
+
+#packs {
+	background-color: #ffffff;
+}
+
+#works {
+	background-color: #ffffff;
+}

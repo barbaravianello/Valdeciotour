@@ -8,10 +8,12 @@ def index(request):
 
 	packages = Package.objects.all()
 	gallery = Gallery.objects.all()
+	#albuns = GalleryImage.objects.all()
 	
 	context = {
 		'packages': packages,
         'gallery': gallery,
+		#'albuns': albuns,
 	}
 	
 	if request.method == 'POST':

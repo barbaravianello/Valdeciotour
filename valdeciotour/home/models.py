@@ -60,20 +60,13 @@ class Email(models.Model):
     def __str__(self):
         return self.nome
       
-      
+   
 class GalleryManager(models.Manager):
     def search(self, query):
         return self.get_queryset().filter(Q(name__icontains=query)) | Q(description__contains=query)
 
 class GalleryImage(models.Model):
-	gallery_choices = Gallery.objects.all().values_list('title')
-	CHOICES = ()
-	for i in gallery_choices:
-		CHOICES += (
-			('title', i),
-		)
-      
 	album = models.ForeignKey(Gallery, related_name='gallery', blank=True)
-	id_image = models.CharField(max_length=100, verbose_name="Álbum", choices=CHOICES)
+	#id_image = models.CharField(max_length=100, verbose_name="Álbum", choices=CHOICES)
 	image = models.ImageField(upload_to='gallery/images', verbose_name="Imagem")
 

@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from home.models import Package, Gallery
+from home.models import Package, Gallery, GalleryImage
 from .forms import ContactValdeciotour, LeadForm
 from django.contrib import messages
 from django.shortcuts import render, redirect
@@ -8,12 +8,12 @@ def index(request):
 
 	packages = Package.objects.all()
 	gallery = Gallery.objects.all()
-	#albuns = GalleryImage.objects.all()
+	albuns = GalleryImage.objects.all()
 	
 	context = {
 		'packages': packages,
         'gallery': gallery,
-		#'albuns': albuns,
+		'albuns': albuns,
 	}
 	
 	if request.method == 'POST':

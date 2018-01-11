@@ -150,7 +150,9 @@
                 <br>
                 <p> {{ package.description|safe|escape }} </p>
                 <p><span style="font-weight:700;">Data de Partida:</span> {{ package.travel_date }}</p>
-                <p><span style="font-weight:700;">Data de Retorno:</span> {{ package.arrival_date }}</p>
+                {% if package.travel_type == "idavolta" %}
+                  <p><span style="font-weight:700;">Data de Retorno:</span> {{ package.arrival_date }}</p>
+                {% endif %}
                 <p><span style="font-weight:700;">Preço:</span> {{ package.price}}</p>
               </div>
               <div class="col-md-12" id="left">
@@ -243,13 +245,35 @@
                 </div>
                 <div class="es-carousel">
                   <ul>
-                   {% for img in albuns %}
+                  {% for img in albuns %}
+                      {% if item.id == img.album_id %}
                       <li>
                         <a href="#">
                           <img src="{{ img.image.url }}" data-large="{{ img.image.url }}" />
                         </a>
                       </li>
-					         {% endfor %}
+                      {% endif %}
+                   {% endfor %}
+                   <!--<li>
+                      <a href="#">
+                        <img src="{% static 'images_carousel/1.jpg' %}" data-large="{% static 'images_carousel/1.jpg' %}" alt="image01" data-description="Some description" />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <img src="{% static 'images_carousel/2.jpg' %}" data-large="{% static 'images_carousel/2.jpg' %}images_carousel/2.jpg" alt="image02" data-description="Some description" />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <img src="{% static 'images_carousel/3.jpg' %}" data-large="{% static 'images_carousel/3.jpg' %}" alt="image03" data-description="Some description" />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <img src="{% static 'images_carousel/4.jpg' %}" data-large="{% static 'images_carousel/4.jpg' %}" alt="image04" data-description="Some description" />
+                      </a>
+                    </li>-->
                   </ul>
                 </div>
               </div>
@@ -260,7 +284,7 @@
           <!-- COMENTÁRIOS DO FACEBOOK -->
           <!--<div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false" ></div>-->
 
-          <div class="fb-comments" data-href="https://barbaravianello.github.io/Valdeciotour" data-numposts="5" style="margin-left: 5%"></div>
+          <div class="fb-comments" data-href="https://barbaravianello.github.io/Valdeciotour/{{item.slug}}" data-numposts="5" style="margin-left: 5%"></div>
 
           <!-- Fim dos COMENTÀRIOS do FACEBOOK -->   
         </div>

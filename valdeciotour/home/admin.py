@@ -17,10 +17,6 @@ class GalleryAdmin(admin.ModelAdmin):
 	search_fields = ['title', 'slug']
 	prepopulated_fields = {'slug': ['title']}
 	inlines = [GalleryImageInline,]
-   
-class GalleryImageInline(admin.TabularInline):
-    model = GalleryImage
-    extra = 0
 
 admin.site.register(Package, PackageAdmin)
 admin.site.register(Gallery, GalleryAdmin)

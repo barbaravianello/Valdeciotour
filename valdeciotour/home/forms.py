@@ -2,7 +2,7 @@ from django import forms
 from django.core.mail import send_mail
 from django.conf import settings 
 from . import views
-from .models import Email, Package
+from .models import Email, Package, Gallery
 
 
 class ContactValdeciotour(forms.Form):
@@ -32,7 +32,13 @@ class ContactValdeciotour(forms.Form):
 
 # Cria o formulario para recolher o e-mail do usuario
 class LeadForm(forms.Form):
-	lead_place = forms.CharField(widget=forms.Select(choices=Package.objects.all().values_list('id', 'title'), attrs={'style':'color: #6c7279; border-radius: 20px; padding-left: 5px; padding-right: 5px; width: 53%; margin-bottom: 10px;margin-top: 10px'}))
+
+	def __init__(self, *args, **kwargs):
+		super(LeadForm, self).__init__(*args, **kwargs)
+		self.fields['lead_place'].choices = [('', '----------')] + [(item.id, item.title) for item in Package.objects.all()]
+
+
+	lead_place = forms.ChoiceField(widget=forms.Select(choices=(), attrs={'style':'color: #6c7279; border-radius: 20px; padding-left: 5px; padding-right: 5px; width: 53%; margin-bottom: 10px;margin-top: 10px'}))
 	lead_name = forms.CharField(label = "Nome", max_length = 100, widget=forms.TextInput(attrs={'placeholder': 'Digite seu nome'}))
 	lead_email = forms.EmailField(label = "E-mail", widget=forms.TextInput(attrs={'placeholder': 'Nos informe um e-mail para contato'}))
 	lead_email.clean('email@example.com')

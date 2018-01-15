@@ -198,7 +198,7 @@
        {% for item in gallery %}
         <div class="item">
           <div class="work isotope-item"> 
-              <a href="" class="work-box" data-toggle="modal" data-target="#modal-galeria-{{item.slug}}"> 
+              <a href="" class="work-box" data-toggle="modal" data-target="#modal-galeria"> 
               <img src={{ item.image.url }} alt="" style="height: 280px">
               <!-- overlay -->
               <div class="overlay">
@@ -225,35 +225,42 @@
   ================================================== -->
 
   <!-- MODAL 1 -->
-  {% for item in gallery %}
-  <div class="modal fade" id="modal-galeria-{{item.slug}}" role="dialog" style="margin:auto" >
+  <div class="modal fade" id="modal-galeria" role="dialog" style="margin:auto" >
     <div class="modal-dialog modal-md" style="width: 50%; height:50%;" id="modal-md">
       <div class="modal-content" style="height: auto; min-height: 50%;">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" style="padding-top: 3%; padding-right: 5%;">&times;</button>
           <br>
-          <h4 align="center" style="margin-top: 5%; margin-bottom: 5%">{{ item.title }}</h4>
+          <h4 align="center" style="margin-top: 5%; margin-bottom: 5%">GALERIA</h4>
         </div>
         <div class="modal-body" style="margin">
           <div id="rg-gallery" class="rg-gallery" style="padding: 5% 5%;" >
             <div class="rg-thumbs">
             <!-- Elastislide Carousel Thumbnail Viewer -->
-              <div class="es-carousel-wrapper">
-                <div class="es-nav">
-                  <span class="es-nav-prev">Previous</span>
-                  <span class="es-nav-next">Next</span>
-                </div>
-                <div class="es-carousel">
-                  <ul>
+              
+                <!--<style>
+                  #big-image img{
+                    width: auto;
+                    height: 350px;
+                    margin-top: 60px;
+                  }
+                </style>
+
+                <div class="row owl-carousel owl-carousel-carousel">
+                    
                   {% for img in albuns %}
                       {% if item.id == img.album_id %}
-                      <li>
-                        <a href="#">
-                          <img src="{{ img.image.url }}" data-large="{{ img.image.url }}" />
-                        </a>
-                      </li>
-                      {% endif %}
-                   {% endfor %}
+                      <div id="small-images">
+                        
+                          <img class="thumbnailImage" src="{{ img.image.url }}" data-large="{{ img.image.url }}" />
+                        
+                      </div>
+                      
+                         
+                      
+                     {% endif %}
+                   {% endfor %}-->
+                   
                    <!--<li>
                       <a href="#">
                         <img src="{% static 'images_carousel/1.jpg' %}" data-large="{% static 'images_carousel/1.jpg' %}" alt="image01" data-description="Some description" />
@@ -274,24 +281,41 @@
                         <img src="{% static 'images_carousel/4.jpg' %}" data-large="{% static 'images_carousel/4.jpg' %}" alt="image04" data-description="Some description" />
                       </a>
                     </li>-->
+
+                     <!-- Elastislide Carousel Thumbnail Viewer -->
+              <div class="es-carousel-wrapper">
+                <div class="es-nav">
+                  <span class="es-nav-prev">Previous</span>
+                  <span class="es-nav-next">Next</span>
+                </div>
+                <div class="es-carousel">
+                  <ul>
+                    {% for img in albuns %}
+                   <li>
+                    <a href="#">
+                      <img src="{{ img.image.url }}" data-large="{{ img.image.url }}" />
+                    </a>
+                  </li>
+                  {% endfor %}
                   </ul>
                 </div>
               </div>
             <!-- End Elastislide Carousel Thumbnail Viewer -->
-            
+                  
+              
             </div><!-- rg-thumbs -->
           </div><!-- rg-gallery -->
           <!-- COMENTÁRIOS DO FACEBOOK -->
           <!--<div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false" ></div>-->
-
-          <div class="fb-comments" data-href="https://barbaravianello.github.io/Valdeciotour/{{item.slug}}" data-numposts="5" style="margin-left: 5%"></div>
+          <br>
+          <br>
+          <div class="fb-comments" data-href="https://barbaravianello.github.io/Valdeciotour" data-numposts="5" style="margin-left: 5%"></div>
 
           <!-- Fim dos COMENTÀRIOS do FACEBOOK -->   
         </div>
       </div>
     </div>
   </div>
-  {% endfor %}
   <!-- FIM DO MODAL 1 -->
 
 

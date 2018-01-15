@@ -233,7 +233,6 @@
 
 
       /*------------------- CONFIGURAÇÃO DO CAROUSEL DE GALERIA  ---------------------*/
-
         $('.owl-carousel').owlCarousel({
             loop:true,
             margin:10,
@@ -270,6 +269,14 @@
            owl.trigger('play.owl.autoplay', [owlCarouselTimeout]);
         })
 
+
+        $(function(){
+          $("#big-image img").nextAll().hide();
+          $("#small-images img").click(function(e){
+              var index = $(this).index();
+              $("#big-image img").eq(index).show().siblings().hide();
+          });
+      });
       /*--------------- FIM DE CONFIGURAÇÃO DO CAROUSEL DE GALERIA  -----------------*/
 		
 		
@@ -300,7 +307,27 @@
 		}, {scope: 'publish_actions'});}
 
 		
-		/*------------------- FIM API DO FACEBOOK -  CONFIGURAÇÃO   ---------------------*/
+    /*------------------- FIM API DO FACEBOOK -  CONFIGURAÇÃO   ---------------------*/
+    
+    $('#modalCarousel').owlCarousel({
+    loop:false,
+    margin:10,
+    nav:true,
+    mouseDrag:false,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:3
+        }
+    }
+});
+
+       
 		
     </script>
     

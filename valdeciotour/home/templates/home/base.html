@@ -171,6 +171,33 @@
 
     /*------------------- CONFIGURAÇÃO DO CAROUSEL DE GALERIA  ---------------------*/
 
+    $('.modal-carousel').owlCarousel({
+      margin: 20,
+      loop:true,
+      dots: true,
+        nav:true,
+        lazyLoad:true,
+        pagination:false,
+        navText: ['<br><i class="fa fa-chevron-left" style="float: left;vertical-align: top;position:absolute;"></i> ', '<i class="fa fa-chevron-right" style="float: right;vertical-align: middle;"></i>'],
+        autoplay: true,
+        autoplayTimeout: 4000,
+        autoplaySpeed: 1000,
+        autoplayHoverPause: true,
+        responsiveClass: true,
+        responsiveRefreshRate : 10,  
+        responsive:{
+                0:{
+                    items:1
+                },
+                600:{
+                    items:1
+                },
+                1000:{
+                    items:1
+                }
+            }
+        })
+
       $('.owl-carousel').owlCarousel({
         loop:true,
         margin:10,
@@ -233,50 +260,7 @@
 
 
       /*------------------- CONFIGURAÇÃO DO CAROUSEL DE GALERIA  ---------------------*/
-        $('.owl-carousel').owlCarousel({
-            loop:true,
-            margin:10,
-            nav:true,
-            lazyLoad:true,
-            pagination:true,
-            navText: ['<br><i class="fa fa-chevron-left" style="float: left;vertical-align: middle;position:absolute;"></i> ', '<i class="fa fa-chevron-right" style="float: right;vertical-align: middle;"></i>'],
-            autoplay: true,
-            autoplayTimeout: 4000,
-            autoplaySpeed: 1000,
-            autoplayHoverPause: true,
-            animateOut: 'fadeOut',
-            animateIn: 'fadeIn',
-            slideTransition: 'linear',
-            responsiveClass: true,
-            responsiveRefreshRate : 10,
-            responsive:{
-                0:{
-                    items:1
-                },
-                600:{
-                    items:3
-                },
-                1000:{
-                    items:3
-                }
-            }
-        });
 
-        var owl = $('.owl-carousel');
-        var owlCarouselTimeout = 50;
-              owl.on('mouseleave',function(){
-           owl.trigger('stop.owl.autoplay'); //this is main line to fix it
-           owl.trigger('play.owl.autoplay', [owlCarouselTimeout]);
-        })
-
-
-        $(function(){
-          $("#big-image img").nextAll().hide();
-          $("#small-images img").click(function(e){
-              var index = $(this).index();
-              $("#big-image img").eq(index).show().siblings().hide();
-          });
-      });
       /*--------------- FIM DE CONFIGURAÇÃO DO CAROUSEL DE GALERIA  -----------------*/
 		
 		
@@ -330,7 +314,8 @@
        
 		
     </script>
-    
+
+
     <div id="fb-root"></div>
   </body>
 </html>

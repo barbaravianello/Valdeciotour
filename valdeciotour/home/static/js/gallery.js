@@ -48,9 +48,9 @@ $(function() {
 	};
 
 	// gallery container
-	var $rgGallery			= $('#rg-gallery'),
+	var $rgGallery			= $('#rg-gallery');
 	// carousel container
-	$esCarousel			= $rgGallery.find('div.es-carousel-wrapper'),
+	var $esCarousel			= $rgGallery.find('div.es-carousel-wrapper'),
 	// the carousel items
 	$items				= $esCarousel.find('ul > li'),
 	// total number of items
@@ -250,6 +250,7 @@ $(function() {
 	})();
 
 	Gallery.init();
+
 	
 	/*
 	Example to add more items to the gallery:

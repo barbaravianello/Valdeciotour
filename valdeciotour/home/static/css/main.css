@@ -2217,7 +2217,8 @@ button + label{
 @media all and (max-width: 1200px){
 	#gtco-products {
 		margin-top: 40px;
-	}
+  }
+
 }
 
 @media all and (min-width: 320px) and (max-width: 385px){
@@ -2225,7 +2226,7 @@ button + label{
 		margin-left: -6%;
     	margin-right: -6%;
     	margin-top: -55%;
-	}
+  }
 }
 
 @media all and (min-width: 386px) and (max-width: 620px){
@@ -2233,7 +2234,8 @@ button + label{
 		margin-left: -6%;
     	margin-right: -6%;
     	margin-top: -40%;
-	}
+  }
+
 }
 
 

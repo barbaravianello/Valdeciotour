@@ -237,73 +237,58 @@
           <div id="rg-gallery-{{item.slug}}" class="rg-gallery" style="padding: 5% 5%;" >
             <div class="rg-thumbs">
             <!-- Elastislide Carousel Thumbnail Viewer -->
-              
-                
+<style>
+    .thumbnails img, .main-image img {
+          max-width: 100%;
+          padding: 5px;
+          height: auto;       
+        }
+    
+    
+        .main-image {
+          max-width: 400px;
+          width: 100%;
+          margin-left: 15%;
+          margin-bottom: 0.75em;
+          margin-top: 10%;
+        }
+        .thumbnails li {
+          display: inline;
+          margin: 0 10px 0 0;
+          width: 40px;
+    
+        }
+    
+        .thumbnails li img {
+    
+          width: 80px;
+    
+        }
+        .thumbnails {
+    
+        padding: 0;
+    
+        }
+  </style>
+<ul class="thumbnails">
+            <div class="owl-carousel owl-carousel-carousel">
+                {% for img in albuns %}
+                {% if item.id == img.album_id %}
+                <li><a href="{{img.image.url}}"><img src="{{img.image.url}}" alt="Thumbnails"></a></li>
+              {% endif %}
+              {% endfor %}
+            </div>
+          </ul>
 
-                <div class="modal-carousel row owl-carousel owl-carousel-carousel" style="width: 80%; margin-right: 10%; margin-left:10%;">
-                    
-                  {% for img in albuns %}
-                      {% if item.id == img.album_id %}
-                      <div class="item">
-                          <img style=".item img{ max-height: 500px !important;}" src="{{ img.image.url }}" data-large="{{ img.image.url }}" />
-                      </div>
-                      
-                         
-                      
-                     {% endif %}
-                   {% endfor %}
-
-                </div>
-                   
-                   <!--<li>
-                      <a href="#">
-                        <img src="{% static 'images_carousel/1.jpg' %}" data-large="{% static 'images_carousel/1.jpg' %}" alt="image01" data-description="Some description" />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <img src="{% static 'images_carousel/2.jpg' %}" data-large="{% static 'images_carousel/2.jpg' %}images_carousel/2.jpg" alt="image02" data-description="Some description" />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <img src="{% static 'images_carousel/3.jpg' %}" data-large="{% static 'images_carousel/3.jpg' %}" alt="image03" data-description="Some description" />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <img src="{% static 'images_carousel/4.jpg' %}" data-large="{% static 'images_carousel/4.jpg' %}" alt="image04" data-description="Some description" />
-                      </a>
-                    </li>-->
-
-                     <!-- Elastislide Carousel Thumbnail Viewer -->
-              <!--<div class="es-carousel-wrapper">
-                <div class="es-nav">
-                  <span class="es-nav-prev">Previous</span>
-                  <span class="es-nav-next">Next</span>
-                </div>
-                <div class="es-carousel">
-                  <ul>
-                    {% for img in albuns %}
-                   <li>
-                    <a href="#">
-                      <img src="{{ img.image.url }}" data-large="{{ img.image.url }}" />
-                    </a>
-                  </li>
-                  {% endfor %}
-                  </ul>
-                </div>
-              </div>-->
-            <!-- End Elastislide Carousel Thumbnail Viewer -->
-                  
-              
+          <div class="main-image">
+              <img src="{{item.image.url}}" alt="Placeholder" class="custom">
+            </div>
+          
             </div><!-- rg-thumbs -->
           </div><!-- rg-gallery -->
           <!-- COMENTÁRIOS DO FACEBOOK -->
           <!--<div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false" ></div>-->
-          <br>
-          <br>
-          <br>
+
           <br>
           <div style="width: 90%;" class="fb-comments" data-href="https://barbaravianello.github.io/Valdeciotour/{{item.slug}}" data-numposts="5" style="margin-left: 5%"></div>
 

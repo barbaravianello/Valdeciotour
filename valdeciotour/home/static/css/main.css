@@ -2420,3 +2420,11 @@ button + label{
 #works {
 	background-color: #ffffff;
 }
+
+/* ------------------------------------------------------------------------------
+	Thumbnails do Modal - GALERIA
+-------------------------------------------------------------------------------*/	
+
+#thumb{
+  display: inline !important; 
+}

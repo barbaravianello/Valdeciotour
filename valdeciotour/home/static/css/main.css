@@ -2425,6 +2425,27 @@ button + label{
 	Thumbnails do Modal - GALERIA
 -------------------------------------------------------------------------------*/	
 
-#thumb{
-  display: inline !important; 
+.thumbnails img, .main-image img {
+  max-width: 100%;
+  padding: 5px;
+  height: auto;       
+}
+
+
+.thumbnails li {
+  display: inline;
+  margin: 0 10px 0 0;
+  width: 40px;
+
+}
+
+.thumbnails li img {
+
+  width: 80px;
+
+}
+.thumbnails {
+
+padding: 0;
+
 }

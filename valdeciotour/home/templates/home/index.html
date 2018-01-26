@@ -205,7 +205,7 @@
                 <div class="overlay-caption">
                   <h5>{{ item.title }} </h5>
                   <div class="conForm">
-					  <button class="submitBnt" width=20>Veja mais</button>
+					          <button class="submitBnt" width=20>Veja mais</button>
                   </div>
                 </div>
               </div>
@@ -219,6 +219,53 @@
   </div>
 </div>
 <!-- FIM DA SEÇÃO GALERIA -->
+
+<style>
+
+@media all and (max-width: 400px) {
+  .main-image {
+    margin-top: 60% !important;
+  }
+}
+  
+@media all and (min-width: 401px) and (max-width: 700px){
+  .main-image {
+    margin-top: 40% !important;
+  }
+}
+
+
+@media all and (min-width: 701px) and (max-width: 780px){
+  .main-image {
+    margin-top: 30% !important;
+  }
+  .main-image img{
+    width: 340px;
+  }
+}
+
+@media all and (min-width: 781px) and (max-width: 1100px){
+  .main-image {
+    margin-top: 40% !important;
+  }
+  .main-image img{
+    width: 340px;
+  }
+}
+@media all and (min-width: 1101px) {
+  .main-image {
+    max-width: 360px;
+    width: 100%;
+    margin-left: 7%;
+    margin-bottom: 0.75em;
+    margin-top: 15%;
+  }
+  .main-image img{
+    width: 500px;
+  }
+}
+
+</style>
 
 
   <!-- MODAIS PARA SEÇÃO GALERIA
@@ -237,61 +284,23 @@
           <div id="rg-gallery-{{item.slug}}" class="rg-gallery" style="padding: 5% 5%;" >
             <div class="rg-thumbs">
             <!-- Elastislide Carousel Thumbnail Viewer -->
-<style>
-    .thumbnails img, .main-image img {
-          max-width: 100%;
-          padding: 5px;
-          height: auto;       
-        }
-    
-    
-        .main-image {
-          max-width: 400px;
-          width: 100%;
-          margin-left: 15%;
-          margin-bottom: 0.75em;
-          margin-top: 10%;
-        }
-        .thumbnails li {
-          display: inline;
-          margin: 0 10px 0 0;
-          width: 40px;
-    
-        }
-    
-        .thumbnails li img {
-    
-          width: 80px;
-    
-        }
-        .thumbnails {
-    
-        padding: 0;
-    
-        }
-  </style>
-<ul class="thumbnails">
-            <div class="owl-carousel owl-carousel-carousel">
-                {% for img in albuns %}
-                {% if item.id == img.album_id %}
-                <li><a href="{{img.image.url}}"><img src="{{img.image.url}}" alt="Thumbnails"></a></li>
-              {% endif %}
-              {% endfor %}
-            </div>
-          </ul>
-
-          <div class="main-image">
-              <img src="{{item.image.url}}" alt="Placeholder" class="custom">
-            </div>
-          
+              <ul class="thumbnails">
+                <div class="owl-carousel owl-carousel-carousel">
+                    {% for img in albuns %}
+                    {% if item.id == img.album_id %}
+                    <li><a href="{{img.image.url}}"><img src="{{img.image.url}}" alt="Thumbnails"></a></li>
+                  {% endif %}
+                  {% endfor %}
+                </div>
+              </ul>
+              <div class="main-image">
+                <img src="{{item.image.url}}" alt="Placeholder" class="custom">
+              </div>
             </div><!-- rg-thumbs -->
           </div><!-- rg-gallery -->
           <!-- COMENTÁRIOS DO FACEBOOK -->
-          <!--<div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false" ></div>-->
-
           <br>
-          <div style="width: 90%;" class="fb-comments" data-href="https://barbaravianello.github.io/Valdeciotour/{{item.slug}}" data-numposts="5" style="margin-left: 5%"></div>
-
+          <div style="width: 80%;" class="fb-comments" data-href="https://barbaravianello.github.io/Valdeciotour/{{item.slug}}" data-numposts="5" style="margin-left: 5%"></div>
           <!-- Fim dos COMENTÀRIOS do FACEBOOK -->   
         </div>
       </div>
@@ -330,32 +339,31 @@
 
       <div class="col-md-6 col-md-push-1 col-sm-12 col-sm-push-0 col-xs-12 col-xs-push-0">
         <div class="row" style="margin-top: 15px">
-			<form role="form" method="POST">
-				  <fieldset>
-				  {% for field in form %}
-					{% if field.label == "Mensagem" %}
-						<div class="col-md-12">
-							{{ field }}
-						</div>
-					{% else %}
-						<div class="col-md-6">
-						 {{ field }}
-						</div>
-					{% endif %}
-				  {% if field.errors %}
-					<label for="errors">{{ field.errors }}</label>
-				  {% endif %}
-				  {% endfor %}
-				  </fieldset>  
-			  <div class="col-md-12">
-				<div class="form-group">
-				  <input value="Enviar mensagem" class="btn btn-primary" type="submit">
-				</div>
-			  </div>
-		   </form>
+          <form role="form" method="POST">
+              <fieldset>
+              {% for field in form %}
+                {% if field.label == "Mensagem" %}
+                  <div class="col-md-12">
+                    {{ field }}
+                  </div>
+                {% else %}
+                  <div class="col-md-6">
+                  {{ field }}
+                  </div>
+                {% endif %}
+                {% if field.errors %}
+                <label for="errors">{{ field.errors }}</label>
+                {% endif %}
+              {% endfor %}
+              </fieldset>  
+            <div class="col-md-12">
+              <div class="form-group">
+                <input value="Enviar mensagem" class="btn btn-primary" type="submit">
+              </div>
+            </div>
+          </form>
         </div>
       </div>
-
       <div class="col-md-6" id="mapa">
         <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d496.1811094157565!2d-35.196915396494944!3d-5.792094122012815!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7b3001b81b9dbed%3A0x6f3cb33019dc1df4!2sEscola+Dom%C3%A9stica+de+Natal!5e0!3m2!1spt-BR!2sbr!4v1513910921914" width="320" height="280" frameborder="0" style="border:0;width:96%" allowfullscreen></iframe>
       </div>
